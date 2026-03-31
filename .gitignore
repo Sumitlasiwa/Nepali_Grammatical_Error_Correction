@@ -1,0 +1,16 @@
+# Virtual environment
+myenv/
+.venv/
+
+# Jupyter Notebook checkpoints
+outputs/ 
+# Dataset 
+data/
+notebooks/
+# logs
+wandb/
+nepali_gec.egg-info/
+__pycache__/
+.ipynb_checkpoints/
+.env
+nepali_gec.egg-info/

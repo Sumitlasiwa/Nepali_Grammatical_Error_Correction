@@ -1,0 +1,4152 @@
+[
+  {
+    "incorrect_sentence": "म हिजो बजार जान्छु ।",
+    "correct_sentence": "म हिजो बजार गएँ ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छु",
+      "correct_span": "गएँ"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरू गृहकार्य गर्दैछ ।",
+    "correct_sentence": "उनीहरू गृहकार्य गर्दैछन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्दैछ",
+      "correct_span": "गर्दैछन्"
+    }
+  },
+  {
+    "incorrect_sentence": "रामलाई भात खान्छ ।",
+    "correct_sentence": "रामले भात खान्छ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "रामलाई",
+      "correct_span": "रामले"
+    }
+  },
+  {
+    "incorrect_sentence": "बुबा काममा गयो ।",
+    "correct_sentence": "बुबा काममा जानुभयो ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गयो",
+      "correct_span": "जानुभयो"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमीले कलमहरू ल्याउनुभयो ।",
+    "correct_sentence": "तिमीले कलमहरू ल्यायौ ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "ल्याउनुभयो",
+      "correct_span": "ल्यायौ"
+    }
+  },
+  {
+    "incorrect_sentence": "टेबुलमा धेरै किताबहरू छ ।",
+    "correct_sentence": "टेबुलमा धेरै किताबहरू छन् ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी विद्यालय गयौ ।",
+    "correct_sentence": "हामी विद्यालय गयौं ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गयौ",
+      "correct_span": "गयौं"
+    }
+  },
+  {
+    "incorrect_sentence": "उले मलाई एउटा कथा सुनायो ।",
+    "correct_sentence": "उसले मलाई एउटा कथा सुनायो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "उले",
+      "correct_span": "उसले"
+    }
+  },
+  {
+    "incorrect_sentence": "पानी पिउनु स्वास्थ्यकोलागि राम्रो हो ।",
+    "correct_sentence": "पानी पिउनु स्वास्थ्यको लागि राम्रो हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "स्वास्थ्यकोलागि",
+      "correct_span": "स्वास्थ्यको लागि"
+    }
+  },
+  {
+    "incorrect_sentence": "आज मोसम धेरै राम्रो छ ।",
+    "correct_sentence": "आज मौसम धेरै राम्रो छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मोसम",
+      "correct_span": "मौसम"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई नेपाली भाषा मन पर्छ ।",
+    "correct_sentence": "मलाई नेपाली भाषा मन पर्छ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "उनी घर जाँदै छन् ।",
+    "correct_sentence": "उनी घर जाँदै छिन् ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छन्",
+      "correct_span": "छिन्"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमी कहाँ बसछौ ?",
+    "correct_sentence": "तिमी कहाँ बस्छौ ?",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बसछौ",
+      "correct_span": "बस्छौ"
+    }
+  },
+  {
+    "incorrect_sentence": "आमाले खाना पकाउनुहुँदैछ ।",
+    "correct_sentence": "आमाले खाना पकाउँदै हुनुहुन्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पकाउनुहुँदैछ",
+      "correct_span": "पकाउँदै हुनुहुन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "म हिजो काठमाडौँ जान्छु ।",
+    "correct_sentence": "म हिजो काठमाडौँ गएँ ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छु",
+      "correct_span": "गएँ"
+    }
+  },
+  {
+    "incorrect_sentence": "सीताले गीत गाउँछ ।",
+    "correct_sentence": "सीता गीत गाउँछे ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गाउँछ",
+      "correct_span": "गाउँछे"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई किताब चायो ।",
+    "correct_sentence": "मलाई किताब चाहियो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चायो",
+      "correct_span": "चाहियो"
+    }
+  },
+
+  {
+    "incorrect_sentence": "केटाकेटीहरू चौरमा खेल्दैछ ।",
+    "correct_sentence": "केटाकेटीहरू चौरमा खेल्दैछन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खेल्दैछ",
+      "correct_span": "खेल्दैछन्"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी धेरै मेहेनती छिन् ।",
+    "correct_sentence": "उनी धेरै मिहिनेती छिन् ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मेहेनती",
+      "correct_span": "मिहिनेती"
+    }
+  },
+  {
+    "incorrect_sentence": "शिक्षकले कक्षामा आउनुभयो ।",
+    "correct_sentence": "शिक्षक कक्षामा आउनुभयो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "शिक्षकले",
+      "correct_span": "शिक्षक"
+    }
+  },
+  {
+    "incorrect_sentence": "घरको माथि चरा उडिरहेको छ ।",
+    "correct_sentence": "घरको माथि चरा उडिरहेको छ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई चिया खान मन लागेको छ ।",
+    "correct_sentence": "मलाई चिया खान मन लागेको छ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "त्यहाँ दुईवटा मान्छे थिए ।",
+    "correct_sentence": "त्यहाँ दुईजना मान्छे थिए ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दुईवटा",
+      "correct_span": "दुईजना"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो साथी काठमाडौँमा बस्छ ।",
+    "correct_sentence": "मेरो साथी काठमाडौँमा बस्छ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "म स्कुल जान्छ ।",
+    "correct_sentence": "म स्कुल जान्छु ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छ",
+      "correct_span": "जान्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "त्यो किताव मेरो हो ।",
+    "correct_sentence": "त्यो किताब मेरो हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "किताव",
+      "correct_span": "किताब"
+    }
+  },
+  {
+    "incorrect_sentence": "आकाशमा ताराहरू चम्किरहेको छ ।",
+    "correct_sentence": "आकाशमा ताराहरू चम्किरहेका छन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चम्किरहेको छ",
+      "correct_span": "चम्किरहेका छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "मैले तिमीलाई देख्यो ।",
+    "correct_sentence": "मैले तिमीलाई देखेँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "देख्यो",
+      "correct_span": "देखेँ"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी हिजो फिल्म हेर्न गयो ।",
+    "correct_sentence": "हामी हिजो फिल्म हेर्न गयौं ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गयो",
+      "correct_span": "गयौं"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई तिम्रो धेरै मायाा लाग्छ ।",
+    "correct_sentence": "मलाई तिम्रो धेरै माया लाग्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मायाा",
+      "correct_span": "माया"
+    }
+  },
+  {
+    "incorrect_sentence": "ऊ सधैँ ढिलो आउँछ ।",
+    "correct_sentence": "ऊ सधैँ ढिलो आउँछ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "हजुरआमा कथा सुनाउनुभयो ।",
+    "correct_sentence": "हजुरआमाले कथा सुनाउनुभयो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हजुरआमा",
+      "correct_span": "हजुरआमाले"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाई कहाँ जानुहुन्छ ?",
+    "correct_sentence": "तपाईँ कहाँ जानुहुन्छ ?",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "तपाई",
+      "correct_span": "तपाईँ"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपाल एक सुन्दरर देश हो ।",
+    "correct_sentence": "नेपाल एक सुन्दर देश हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सुन्दरर",
+      "correct_span": "सुन्दर"
+    }
+  },
+  {
+    "incorrect_sentence": "भाइले पानी खायो ।",
+    "correct_sentence": "भाइले पानी पियो ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खायो",
+      "correct_span": "पियो"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरू क्रिकेट खेल्छ ।",
+    "correct_sentence": "उनीहरू क्रिकेट खेल्छन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खेल्छ",
+      "correct_span": "खेल्छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "रुखमा पात खस्यो ।",
+    "correct_sentence": "रुखबाट पात खस्यो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "रुखमा",
+      "correct_span": "रुखबाट"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई भोोक लागेको छ ।",
+    "correct_sentence": "मलाई भोक लागेको छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भोोक",
+      "correct_span": "भोक"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी विद्यालय जाँदैछिन् ।",
+    "correct_sentence": "उनी विद्यालय जाँदैछिन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "तिमीले मलाई पैसा दिए ।",
+    "correct_sentence": "तिमीले मलाई पैसा दियौ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दिए",
+      "correct_span": "दियौ"
+    }
+  },
+  {
+    "incorrect_sentence": "सूर्य पुर्बबाट उदाउँछ ।",
+    "correct_sentence": "सूर्य पूर्वबाट उदाउँछ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पुर्ब",
+      "correct_span": "पूर्व"
+    }
+  },
+
+  {
+    "incorrect_sentence": "उनीहरू भात खान्छ ।",
+    "correct_sentence": "उनीहरू भात खान्छन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खान्छ",
+      "correct_span": "खान्छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमी घर गयो ।",
+    "correct_sentence": "तिमी घर गयौ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गयो",
+      "correct_span": "गयौ"
+    }
+  },
+  {
+    "incorrect_sentence": "हामीले गृहकार्य गर्छ ।",
+    "correct_sentence": "हामीले गृहकार्य गर्छौँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्छ",
+      "correct_span": "गर्छौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "बुवा बजार जानुभयो ।",
+    "correct_sentence": "बुबा बजार जानुभयो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बुवा",
+      "correct_span": "बुबा"
+    }
+  },
+  {
+    "incorrect_sentence": "केटाहरू खेल खेल्दैछ ।",
+    "correct_sentence": "केटाहरू खेल खेल्दैछन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खेल्दैछ",
+      "correct_span": "खेल्दैछन्"
+    }
+  },
+  {
+    "incorrect_sentence": "बहिनीले भात खायो ।",
+    "correct_sentence": "बहिनीले भात खाइन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खायो",
+      "correct_span": "खाइन्"
+    }
+  },
+  {
+    "incorrect_sentence": "म विद्यालय जान्छ ।",
+    "correct_sentence": "म विद्यालय जान्छु ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छ",
+      "correct_span": "जान्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी भोलि आउँछ ।",
+    "correct_sentence": "हामी भोलि आउँछौँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "आउँछ",
+      "correct_span": "आउँछौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईं कहाँ जान्छौ ?",
+    "correct_sentence": "तपाईं कहाँ जानुहुन्छ ?",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छौ",
+      "correct_span": "जानुहुन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "भाइले चिठ्ठी लेख्छन् ।",
+    "correct_sentence": "भाइले चिठ्ठी लेख्छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "लेख्छन्",
+      "correct_span": "लेख्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "आज धेरै जडो छ ।",
+    "correct_sentence": "आज धेरै जाडो छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जडो",
+      "correct_span": "जाडो"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो घरमा पाँचवटा कोठा छ ।",
+    "correct_sentence": "मेरो घरमा पाँचवटा कोठा छन् ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "हामीले फिल्म हेर्यो ।",
+    "correct_sentence": "हामीले फिल्म हेर्यौँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हेर्यो",
+      "correct_span": "हेर्यौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "टेबलमाथि किताब छ ।",
+    "correct_sentence": "टेबलमाथि किताब छ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "म तिर्खा लागेको छ ।",
+    "correct_sentence": "मलाई तिर्खा लागेको छ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म",
+      "correct_span": "मलाई"
+    }
+  },
+  {
+    "incorrect_sentence": "रूखबाट पात झर्यो ।",
+    "correct_sentence": "रूखबाट पात झरे ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "झर्यो",
+      "correct_span": "झरे"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी विद्यालय जाँदैछ ।",
+    "correct_sentence": "उनी विद्यालय जाँदैछिन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जाँदैछ",
+      "correct_span": "जाँदैछिन्"
+    }
+  },
+  {
+    "incorrect_sentence": "म र मेरो साथी खेल्छ ।",
+    "correct_sentence": "म र मेरो साथी खेल्छौँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खेल्छ",
+      "correct_span": "खेल्छौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "आकाशमा ताराहरु चम्किन्छ ।",
+    "correct_sentence": "आकाशमा ताराहरु चम्किन्छन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चम्किन्छ",
+      "correct_span": "चम्किन्छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "उहाँ मेरो बुबा हो ।",
+    "correct_sentence": "उहाँ मेरो बुबा हुनुहुन्छ ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हो",
+      "correct_span": "हुनुहुन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "मैले काम गरिसकेको छ ।",
+    "correct_sentence": "मैले काम गरिसकेको छु ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छु"
+    }
+  },
+  {
+    "incorrect_sentence": "चराहरू आकाशमा उड्छ ।",
+    "correct_sentence": "चराहरू आकाशमा उड्छन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "उड्छ",
+      "correct_span": "उड्छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमीले के खाएको छौ ?",
+    "correct_sentence": "तिमीले के खाएका छौ ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खाएको",
+      "correct_span": "खाएका"
+    }
+  },
+  {
+    "incorrect_sentence": "आज पानी पर्छ होला ।",
+    "correct_sentence": "आज पानी पर्ला ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पर्छ होला",
+      "correct_span": "पर्ला"
+    }
+  },
+  {
+    "incorrect_sentence": "उसले मलाई एउटा कलम दिई ।",
+    "correct_sentence": "उसले मलाई एउटा कलम दियो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दिई",
+      "correct_span": "दियो"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईंले भात खायौ ?",
+    "correct_sentence": "तपाईंले भात खानुभयो ?",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खायौ",
+      "correct_span": "खानुभयो"
+    }
+  },
+  {
+    "incorrect_sentence": "म नेपाली बोल्न आउँछ ।",
+    "correct_sentence": "मलाई नेपाली बोल्न आउँछ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म",
+      "correct_span": "मलाई"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरू फुटबल खेल्न गयो ।",
+    "correct_sentence": "उनीहरू फुटबल खेल्न गए ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गयो",
+      "correct_span": "गए"
+    }
+  },
+  {
+    "incorrect_sentence": "म आज ढिलो आयो ।",
+    "correct_sentence": "म आज ढिलो आएँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "आयो",
+      "correct_span": "आएँ"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमीले मलाई किन बोलायो ?",
+    "correct_sentence": "तिमीले मलाई किन बोलायौ ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बोलायो",
+      "correct_span": "बोलायौ"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा धेरै हिमाल छन् ।",
+    "correct_sentence": "नेपालमा धेरै हिमालहरु छन् ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हिमाल",
+      "correct_span": "हिमालहरु"
+    }
+  },
+  {
+    "incorrect_sentence": "हामीले चिया पियौ ।",
+    "correct_sentence": "हामीले चिया पियौँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पियौ",
+      "correct_span": "पियौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "रामले रावणलाई मारे ।",
+    "correct_sentence": "रामले रावणलाई मार्यो ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मारे",
+      "correct_span": "मार्यो"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी विद्यालय गई ।",
+    "correct_sentence": "उनी विद्यालय गइन् ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गई",
+      "correct_span": "गइन्"
+    }
+  },
+  {
+    "incorrect_sentence": "के तिमी आउँछ ?",
+    "correct_sentence": "के तिमी आउँछौ ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "आउँछ",
+      "correct_span": "आउँछौ"
+    }
+  },
+  {
+    "incorrect_sentence": "भोलि विदा छ ।",
+    "correct_sentence": "भोलि बिदा छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "विदा",
+      "correct_span": "बिदा"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी सबै मिलेर खेल्छ ।",
+    "correct_sentence": "हामी सबै मिलेर खेल्छौँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खेल्छ",
+      "correct_span": "खेल्छौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "पढनु राम्रो कुरा हो ।",
+    "correct_sentence": "पढ्नु राम्रो कुरा हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पढनु",
+      "correct_span": "पढ्नु"
+    }
+  },
+  {
+    "incorrect_sentence": "ऊ हिजो काठमाडौं जान्छ ।",
+    "correct_sentence": "ऊ हिजो काठमाडौं गयो ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छ",
+      "correct_span": "गयो"
+    }
+  },
+  {
+    "incorrect_sentence": "बुबाले फलफूल ल्यायो ।",
+    "correct_sentence": "बुबाले फलफूल ल्याउनुभयो ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "ल्यायो",
+      "correct_span": "ल्याउनुभयो"
+    }
+  },
+  {
+    "incorrect_sentence": "केटाहरु चौरमा दौडिन्छ ।",
+    "correct_sentence": "केटाहरु चौरमा दौडिन्छन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दौडिन्छ",
+      "correct_span": "दौडिन्छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "म भोक लाग्यो ।",
+    "correct_sentence": "मलाई भोक लाग्यो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म",
+      "correct_span": "मलाई"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरुले के गर्यो ?",
+    "correct_sentence": "उनीहरुले के गरे ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्यो",
+      "correct_span": "गरे"
+    }
+  },
+  {
+    "incorrect_sentence": "यो मेरो पुस्तख हो ।",
+    "correct_sentence": "यो मेरो पुस्तक हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पुस्तख",
+      "correct_span": "पुस्तक"
+    }
+  },
+  {
+    "incorrect_sentence": "हामीले धेरै कुरा सिक्यौ ।",
+    "correct_sentence": "हामीले धेरै कुरा सिक्यौँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सिक्यौ",
+      "correct_span": "सिक्यौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी धेरै राम्रो नाच्छ ।",
+    "correct_sentence": "उनी धेरै राम्रो नाच्छिन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "नाच्छ",
+      "correct_span": "नाच्छिन्"
+    }
+  },
+  {
+    "incorrect_sentence": "म सधैं बिहान उठछु ।",
+    "correct_sentence": "म सधैं बिहान उठ्छु ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "उठछु",
+      "correct_span": "उठ्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "मैले एउटा सपना देखे ।",
+    "correct_sentence": "मैले एउटा सपना देखेँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "देखे",
+      "correct_span": "देखेँ"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमी कहिले आउँछ ?",
+    "correct_sentence": "तिमी कहिले आउँछौ ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "आउँछ",
+      "correct_span": "आउँछौ"
+    }
+  },
+  {
+    "incorrect_sentence": "आकाश निलो छ ।",
+    "correct_sentence": "आकाश नीलो छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "निलो",
+      "correct_span": "नीलो"
+    }
+  },
+  {
+    "incorrect_sentence": "उसको दाजु घरमा छैन ।",
+    "correct_sentence": "उसको दाजु घरमा छैनन् ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छैन",
+      "correct_span": "छैनन्"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी सँगै जानेछौ ।",
+    "correct_sentence": "हामी सँगै जानेछौँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जानेछौ",
+      "correct_span": "जानेछौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "म र राम साथी हौ ।",
+    "correct_sentence": "म र राम साथी हौँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हौ",
+      "correct_span": "हौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "यो फल निकै गुलिय छ ।",
+    "correct_sentence": "यो फल निकै गुलियो छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गुलिय",
+      "correct_span": "गुलियो"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरुले मलाई बोलायो ।",
+    "correct_sentence": "उनीहरुले मलाई बोलाए ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बोलायो",
+      "correct_span": "बोलाए"
+    }
+  },
+  {
+    "incorrect_sentence": "म तिम्रो सम्झना आउँछ ।",
+    "correct_sentence": "मलाई तिम्रो सम्झना आउँछ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म",
+      "correct_span": "मलाई"
+    }
+  },
+  {
+    "incorrect_sentence": "त्यो मानछे को हो ?",
+    "correct_sentence": "त्यो मान्छे को हो ?",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मानछे",
+      "correct_span": "मान्छे"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमीले राम्रो काम गर्यो ।",
+    "correct_sentence": "तिमीले राम्रो काम गर्यौ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्यो",
+      "correct_span": "गर्यौ"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरु भोलि यहाँ आउँछ ।",
+    "correct_sentence": "उनीहरु भोलि यहाँ आउँछन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "आउँछ",
+      "correct_span": "आउँछन्"
+    }
+  },
+  {
+    "incorrect_sentence": "आमाले खाना खुवाउनु भयो ।",
+    "correct_sentence": "आमाले खाना खुवाउनुभयो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खुवाउनु भयो",
+      "correct_span": "खुवाउनुभयो"
+    }
+  },
+  {
+    "incorrect_sentence": "म किताब पढेँ ।",
+    "correct_sentence": "मैले किताब पढेँ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म",
+      "correct_span": "मैले"
+    }
+  },
+  {
+    "incorrect_sentence": "भाइले चिठ्ठी लेखिन ।",
+    "correct_sentence": "भाइले चिठ्ठी लेख्यो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "लेखिन",
+      "correct_span": "लेख्यो"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी सहर गयौ ।",
+    "correct_sentence": "हामी सहर गयौँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गयौ",
+      "correct_span": "गयौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "उसको घर धेरै टाडा छ ।",
+    "correct_sentence": "उसको घर धेरै टाढा छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "टाडा",
+      "correct_span": "टाढा"
+    }
+  },
+  {
+    "incorrect_sentence": "के तिमी म सँग आउँछौ ?",
+    "correct_sentence": "के तिमी मसँग आउँछौ ?",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म सँग",
+      "correct_span": "मसँग"
+    }
+  },
+  {
+    "incorrect_sentence": "रामले भात खाए ।",
+    "correct_sentence": "रामले भात खायो ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खाए",
+      "correct_span": "खायो"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरुले फुटबल खेल्यो ।",
+    "correct_sentence": "उनीहरुले फुटबल खेले ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खेल्यो",
+      "correct_span": "खेले"
+    }
+  },
+  {
+    "incorrect_sentence": "म तिमी मन पर्छ ।",
+    "correct_sentence": "मलाई तिमी मन पर्छ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म",
+      "correct_span": "मलाई"
+    }
+  },
+  {
+    "incorrect_sentence": "हाम्रो देस नेपाल हो ।",
+    "correct_sentence": "हाम्रो देश नेपाल हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "देस",
+      "correct_span": "देश"
+    }
+  },
+  {
+    "incorrect_sentence": "कुकुर भुकिरहेका छ ।",
+    "correct_sentence": "कुकुर भुकिरहेको छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भुकिरहेका छ",
+      "correct_span": "भुकिरहेको छ"
+    }
+  },
+  {
+    "incorrect_sentence": "म राती अबेरसम्म पढछु ।",
+    "correct_sentence": "म राती अबेरसम्म पढ्छु ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पढछु",
+      "correct_span": "पढ्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमीले के सोच्यो ?",
+    "correct_sentence": "तिमीले के सोच्यौ ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सोच्यो",
+      "correct_span": "सोच्यौ"
+    }
+  },
+  {
+    "incorrect_sentence": "हामीले जित्यो ।",
+    "correct_sentence": "हामीले जित्यौँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जित्यो",
+      "correct_span": "जित्यौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "उस मलाई एउटा उपहार दियो ।",
+    "correct_sentence": "उसले मलाई एउटा उपहार दियो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "उस",
+      "correct_span": "उसले"
+    }
+  },
+  {
+    "incorrect_sentence": "यो काम सजलो छ ।",
+    "correct_sentence": "यो काम सजिलो छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सजलो",
+      "correct_span": "सजिलो"
+    }
+  },
+
+  {
+    "incorrect_sentence": "मैले तिमी देखेँ ।",
+    "correct_sentence": "मैले तिमीलाई देखेँ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "तिमी",
+      "correct_span": "तिमीलाई"
+    }
+  },
+  {
+    "incorrect_sentence": "ऊ धेर सनो छ ।",
+    "correct_sentence": "ऊ धेरै सानो छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "धेर",
+      "correct_span": "धेरै"
+    }
+  },
+  {
+    "incorrect_sentence": "राम बिद्यालय गयो ।",
+    "correct_sentence": "राम विद्यालय गयो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बिद्यालय",
+      "correct_span": "विद्यालय"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी सधैं खेल्छौ ।",
+    "correct_sentence": "हामी सधैं खेल्छौँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खेल्छौ",
+      "correct_span": "खेल्छौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईंले के भन्यौ ?",
+    "correct_sentence": "तपाईंले के भन्नुभयो ?",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भन्यौ",
+      "correct_span": "भन्नुभयो"
+    }
+  },
+  {
+    "incorrect_sentence": "आज बाहिर धेरै हावा चल्दैछन् ।",
+    "correct_sentence": "आज बाहिर धेरै हावा चल्दैछ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चल्दैछन्",
+      "correct_span": "चल्दैछ"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरुले मलाई बोलाएका थियो ।",
+    "correct_sentence": "उनीहरुले मलाई बोलाएका थिए ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बोलाएका थियो",
+      "correct_span": "बोलाएका थिए"
+    }
+  },
+  {
+    "incorrect_sentence": "पीडित परिवारले लगाएको आरोप हुनै नसक्ने भन्दै आफूहरूले छानविनलाई प्रभावकारी बनाउन लागेको बतायो ।",
+    "correct_sentence": "पीडित परिवारले लगाएको आरोप हुनै नसक्ने भन्दै आफूहरूले छानविनलाई प्रभावकारी बनाउन लागेको बताए ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बतायो",
+      "correct_span": "बताए"
+    }
+  },
+  {
+    "incorrect_sentence": "भाइबहिनी हो, तपाईंहरूलाई विकिपिडियाबारे जानकारी छौ ?",
+    "correct_sentence": "भाइबहिनी हो, तपाईंहरूलाई विकिपिडियाबारे जानकारी छ ?",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छ"
+    }
+  },
+  {
+    "incorrect_sentence": "पक्कै पनि इन्टरनेटमा व्यस्त हुने भाइबहिनीलाई यसबारे जानकारी हुनु सक्छ ।",
+    "correct_sentence": "पक्कै पनि इन्टरनेटमा व्यस्त हुने भाइबहिनीलाई यसबारे जानकारी हुन सक्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुनु",
+      "correct_span": "हुन"
+    }
+  },
+  {
+    "incorrect_sentence": "तर इन्टरनेटमा व्यस्त नहुने भाइबहिनीलाई जानकारी नहुन पनि सकछ ।",
+    "correct_sentence": "तर इन्टरनेटमा व्यस्त नहुने भाइबहिनीलाई जानकारी नहुन पनि सक्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सकछ",
+      "correct_span": "सक्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "प्याराग्लाइडिङले दिएको पदक एसियाली खेलमा नेपालको २४ औं पदक हुन् ।",
+    "correct_sentence": "प्याराग्लाइडिङले दिएको पदक एसियाली खेलमा नेपालको २४ औं पदक हो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "अमेरिकी कर नियममा आएको पछिल्लो परिवर्तन लगत्तै एप्पल यो परिमाणको कर तिर्न राजी भएका हो ।",
+    "correct_sentence": "अमेरिकी कर नियममा आएको पछिल्लो परिवर्तन लगत्तै एप्पल यो परिमाणको कर तिर्न राजी भएको हो ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भएका",
+      "correct_span": "भएको"
+    }
+  },
+  {
+    "incorrect_sentence": "विकिपिडिया बहुभाषी वेबमा आधारित स्वतन्त्र र खुला ज्ञानकोस हो ।",
+    "correct_sentence": "विकिपिडिया बहुभाषी वेबमा आधारित स्वतन्त्र र खुला ज्ञानकोश हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "ज्ञानकोस",
+      "correct_span": "ज्ञानकोश"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईंहरूलाई हामीले कतिपय जानकारी यही वेबमा रहेको आधारमा दिने गरेका छौ ।",
+    "correct_sentence": "तपाईंहरूलाई हामीले कतिपय जानकारी यही वेबमा रहेको आधारमा दिने गरेका छौं ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छौं"
+    }
+  },
+  {
+    "incorrect_sentence": "विकिपिडिया र यसबारे जानकारीसमेत यही वेबबाट तपाईंहरूलाई दिन लागेका हौ ।",
+    "correct_sentence": "विकिपिडिया र यसबारे जानकारीसमेत यही वेबबाट तपाईंहरूलाई दिन लागेका हौं ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हौ",
+      "correct_span": "हौं"
+    }
+  },
+  {
+    "incorrect_sentence": "कमलपोखरी करिब २३ रोपनी क्षेत्रफलमा फैलिएका छ ।",
+    "correct_sentence": "कमलपोखरी करिब २३ रोपनी क्षेत्रफलमा फैलिएको छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "फैलिएका",
+      "correct_span": "फैलिएको"
+    }
+  },
+  {
+    "incorrect_sentence": "पोखरीका चारवटा कुनामा आकर्षक र संस्कृति झल्किने मण्डप छ ।",
+    "correct_sentence": "पोखरीका चारवटा कुनामा आकर्षक र संस्कृति झल्किने मण्डप छन् ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "पोखरी छिर्ने गेट परम्परागत नेपाली सैलिको छ ।",
+    "correct_sentence": "पोखरी छिर्ने गेट परम्परागत नेपाली शैलीको छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सैलिको",
+      "correct_span": "शैलीको"
+    }
+  },
+  {
+    "incorrect_sentence": "सुजनले काठमाडौंको भीडभाड भरिएको सडकमा हेर्दा उसको मन ओसारेपन महसुस गर्दथ्यो ।",
+    "correct_sentence": "सुजनले काठमाडौंको भीडभाड भरिएको सडकमा हेर्दा उसको मनमा ओसारेपन महसुस गर्दथ्यो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मन",
+      "correct_span": "मनमा"
+    }
+  },
+  {
+    "incorrect_sentence": "तेइस वर्षको यो युवा जीवनको गतिमा कहिलेकाहीँ थाक्थे ।",
+    "correct_sentence": "तेइस वर्षको यो युवा जीवनको गतिमा कहिलेकाहीँ थाक्थ्यो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "थाक्थे",
+      "correct_span": "थाक्थ्यो"
+    }
+  },
+  {
+    "incorrect_sentence": "उसले कलेज पढाइ सकेपछि धरानमा रहेको आमाबुबालाई भेट्ने विचार गरे ।",
+    "correct_sentence": "उसले कलेज पढाइ सकेपछि धरानमा रहेको आमाबुबालाई भेट्ने विचार गर्यो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गरे",
+      "correct_span": "गर्यो"
+    }
+  },
+  {
+    "incorrect_sentence": "बसबाट उत्रँदा धरानको हावामा नयाँपन थिइन् ।",
+    "correct_sentence": "बसबाट उत्रँदा धरानको हावामा नयाँपन थियो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "थिइन्",
+      "correct_span": "थियो"
+    }
+  },
+  {
+    "incorrect_sentence": "तर सुजनको मनमा अझै पनि एक खालिपना थियो ।",
+    "correct_sentence": "तर सुजनको मनमा अझै पनि एक खालीपन थियो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खालिपना",
+      "correct_span": "खालीपन"
+    }
+  },
+  {
+    "incorrect_sentence": "अर्को दिन, बिहानै उठेर उसले पुरानो डायरी फेला पायो ।",
+    "correct_sentence": "अर्को दिन, बिहानै उठेर उसले पुरानो डायरी फेला पार्यो ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पायो",
+      "correct_span": "पार्यो"
+    }
+  },
+  {
+    "incorrect_sentence": "प्राकृतिक साधन र प्राकृतिक देन नै सम्पदा हुन् ।",
+    "correct_sentence": "प्राकृतिक साधन र प्राकृतिक देन नै सम्पदा हो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "यिनको समुचित सदुपयोगबाट नै नेपाललाई समुन्नत र वैभसाली बनाउन सकिन्छ ।",
+    "correct_sentence": "यिनको समुचित सदुपयोगबाट नै नेपाललाई समुन्नत र वैभशाली बनाउन सकिन्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "वैभसाली",
+      "correct_span": "वैभशाली"
+    }
+  },
+  {
+    "incorrect_sentence": "जलसम्पदाका हिसाबले नेपाल संसारकै दोस्रो धनी राष्ट्र मानिन्छन् ।",
+    "correct_sentence": "जलसम्पदाका हिसाबले नेपाल संसारकै दोस्रो धनी राष्ट्र मानिन्छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मानिन्छन्",
+      "correct_span": "मानिन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "यहाँ अनन्त जलाशय र जलप्रवाह रहेका छ ।",
+    "correct_sentence": "यहाँ अनन्त जलाशय र जलप्रवाह रहेका छन् ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "वास्तवमा पानी हरेक प्राणीका लागि अत्यावस्यक वस्तु हो ।",
+    "correct_sentence": "वास्तवमा पानी हरेक प्राणीका लागि अत्यावश्यक वस्तु हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "अत्यावस्यक",
+      "correct_span": "अत्यावश्यक"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा अधिकांश जनताले कृषिलाई मुख्य पेसाको रूपमा अँगालेका छन् ।",
+    "correct_sentence": "नेपालमा अधिकांश जनताले कृषिलाई मुख्य पेसाका रूपमा अँगालेका छन् ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पेसाको",
+      "correct_span": "पेसाका"
+    }
+  },
+  {
+    "incorrect_sentence": "कृषि पेसालाई राम्रो बनाउन सकिएका खण्डमा नै नेपालको पनि सही रूपमा विकास हुन सक्थे ।",
+    "correct_sentence": "कृषि पेसालाई राम्रो बनाउन सकिएका खण्डमा नै नेपालको पनि सही रूपमा विकास हुन सक्छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सक्थे",
+      "correct_span": "सक्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "तसर्थ कृषिलाई राम्रो तरिकाले विकास गर्न सिँचाइको ठूलो भूमिका रहेका हुन्छ ।",
+    "correct_sentence": "तसर्थ कृषिलाई राम्रो तरिकाले विकास गर्न सिँचाइको ठूलो भूमिका रहेको हुन्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "रहेका",
+      "correct_span": "रहेको"
+    }
+  },
+  {
+    "incorrect_sentence": "अनुसासन नै मानिसको व्यक्तित्व हो ।",
+    "correct_sentence": "अनुशासन नै मानिसको व्यक्तित्व हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "अनुसासन",
+      "correct_span": "अनुशासन"
+    }
+  },
+  {
+    "incorrect_sentence": "मान्छे हुन केवल दुई खुट्टा, दुई हात, दुई आँखा मात्र भए पुग्दैन ।",
+    "correct_sentence": "मान्छे हुन केवल दुई खुट्टा, दुई हात, दुई आँखा मात्र भएर पुग्दैन ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भए",
+      "correct_span": "भएर"
+    }
+  },
+  {
+    "incorrect_sentence": "मान्छे हुनुको सही अर्थ उसमा निहित नम्रसाली भद्रता हो ।",
+    "correct_sentence": "मान्छे हुनुको सही अर्थ उसमा निहित नम्रशाली भद्रता हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "नम्रसाली",
+      "correct_span": "नम्रशाली"
+    }
+  },
+  {
+    "incorrect_sentence": "अनुशासन नरहे मान्छे हुनुको कुनै अर्थ रहँदैनन् ।",
+    "correct_sentence": "अनुशासन नरहे मान्छे हुनुको कुनै अर्थ रहँदैन ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "रहँदैनन्",
+      "correct_span": "रहँदैन"
+    }
+  },
+  {
+    "incorrect_sentence": "अहिले यस देशमा अनुशासनको ठूलो खाँचो छौ ।",
+    "correct_sentence": "अहिले यस देशमा अनुशासनको ठूलो खाँचो छ ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छ"
+    }
+  },
+
+  {
+    "incorrect_sentence": "हामी हाम्रो देशलाई माया गर्नुपर्छ ।",
+    "correct_sentence": "हामीले हाम्रो देशलाई माया गर्नुपर्छ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हामी",
+      "correct_span": "हामीले"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपाल संसारकै दोश्रो धनी राष्ट्र हो ।",
+    "correct_sentence": "नेपाल संसारकै दोस्रो धनी राष्ट्र हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दोश्रो",
+      "correct_span": "दोस्रो"
+    }
+  },
+  {
+    "incorrect_sentence": "यहाँ धेरै नदीनालाहरु बग्छन् ।",
+    "correct_sentence": "यहाँ धेरै नदीनाला बग्छन् ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "नदीनालाहरु",
+      "correct_span": "नदीनाला"
+    }
+  },
+  {
+    "incorrect_sentence": "पानी विना जीवन सम्भव छैन ।",
+    "correct_sentence": "पानीविना जीवन सम्भव छैन ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पानी विना",
+      "correct_span": "पानीविना"
+    }
+  },
+  {
+    "incorrect_sentence": "कृषकले खेतमा काम गर्दैछ ।",
+    "correct_sentence": "कृषकले खेतमा काम गर्दैछन् ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्दैछ",
+      "correct_span": "गर्दैछन्"
+    }
+  },
+  {
+    "incorrect_sentence": "सिँचाइको सुविधा भए उब्जनी बढ्छ ।",
+    "correct_sentence": "सिँचाइको सुविधा भएमा उब्जनी बढ्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भए",
+      "correct_span": "भएमा"
+    }
+  },
+  {
+    "incorrect_sentence": "अनुशासित विद्यार्थीले राम्रो पढ्छ ।",
+    "correct_sentence": "अनुशासित विद्यार्थीले राम्रो पढ्छन् ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पढ्छ",
+      "correct_span": "पढ्छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "म सधैं समयमा विद्यालय गएँ ।",
+    "correct_sentence": "म सधैं समयमा विद्यालय जान्छु ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गएँ",
+      "correct_span": "जान्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा विभिन्न जातजाति बस्छन् ।",
+    "correct_sentence": "नेपालमा विभिन्न जातजातिहरु बस्छन् ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जातजाति",
+      "correct_span": "जातजातिहरु"
+    }
+  },
+  {
+    "incorrect_sentence": "तिमीले गृहकार्य किन नगरेको ?",
+    "correct_sentence": "तिमीले गृहकार्य किन नगरेका हौ ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "नगरेको",
+      "correct_span": "नगरेका हौ"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी नेपाली हौ ।",
+    "correct_sentence": "हामी नेपाली हौँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हौ",
+      "correct_span": "हौँ"
+    }
+  },
+  {
+    "incorrect_sentence": "त्यहाँ थुप्रै घर ध्वस्त भएका थिए ।",
+    "correct_sentence": "त्यहाँ थुप्रै घरहरू ध्वस्त भएका थिए ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "घर",
+      "correct_span": "घरहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "चारवटा कोठामा बस्ने बानी परेकाहरू एउटा कोठामा खुम्चिनु परको थियो ।",
+    "correct_sentence": "चारवटा कोठामा बस्ने बानी परेकाहरू एउटा कोठामा खुम्चिनु परेको थियो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "परको",
+      "correct_span": "परेको"
+    }
+  },
+  {
+    "incorrect_sentence": "क्याम्प सुन्दर र सुरक्षीत थियो ।",
+    "correct_sentence": "क्याम्प सुन्दर र सुरक्षित थियो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सुरक्षीत",
+      "correct_span": "सुरक्षित"
+    }
+  },
+  {
+    "incorrect_sentence": "यो कथा लेखिएको समयमा मान्छेहरूलाई छालाको रंगअनुसार बोलाउनु सामान्य थियो ।",
+    "correct_sentence": "यो कथा लेखिएको समयमा मान्छेहरूलाई छालाको रंगअनुसार बोलाइनु सामान्य थियो ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बोलाउनु",
+      "correct_span": "बोलाइनु"
+    }
+  },
+  {
+    "incorrect_sentence": "म तपाईंसँग सहमत छुन् ।",
+    "correct_sentence": "म तपाईंसँग सहमत छु ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छुन्",
+      "correct_span": "छु"
+    }
+  },
+
+  {
+    "incorrect_sentence": "यद्यपि, म यस बारेमा त्यति निस्चित छैन ।",
+    "correct_sentence": "यद्यपि, म यस बारेमा त्यति निश्चित छैन ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "निस्चित",
+      "correct_span": "निश्चित"
+    }
+  },
+  {
+    "incorrect_sentence": "म यस विषयमा तपाईंको विचारसँग असहमत छौ ।",
+    "correct_sentence": "म यस विषयमा तपाईंको विचारसँग असहमत छु ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छु"
+    }
+  },
+  {
+    "incorrect_sentence": "म तपाईंको कुरा बुझ्छु, तर मेरो फरक बिचार छ ।",
+    "correct_sentence": "म तपाईंको कुरा बुझ्छु, तर मेरो फरक विचार छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बिचार",
+      "correct_span": "विचार"
+    }
+  },
+  {
+    "incorrect_sentence": "त्यो मलाई अर्थपूर्ण लाग्छन् ।",
+    "correct_sentence": "त्यो मलाई अर्थपूर्ण लाग्छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "लाग्छन्",
+      "correct_span": "लाग्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई लाग्छ हामी दुवैका मान्य विचारहरू छन् ।",
+    "correct_sentence": "मलाई लाग्छ हामी दुवैको मान्य विचारहरू छन् ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दुवैका",
+      "correct_span": "दुवैको"
+    }
+  },
+  {
+    "incorrect_sentence": "म बैठकमा ढिलो आएकोमा माफि चाहन्छु ।",
+    "correct_sentence": "म बैठकमा ढिलो आएकोमा माफी चाहन्छु ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "माफि",
+      "correct_span": "माफी"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईंको जन्मदिन बिर्सिएकोमा कृपया मलाई माफ गर ।",
+    "correct_sentence": "तपाईंको जन्मदिन बिर्सिएकोमा कृपया मलाई माफ गर्नुहोस् ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर",
+      "correct_span": "गर्नुहोस्"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो गल्तीको लागि म माफि चाहन्छु ।",
+    "correct_sentence": "मेरो गल्तीका लागि म माफी चाहन्छु ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गल्तीको",
+      "correct_span": "गल्तीका"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो गल्तीका लागि म माफि चाहन्छु ।",
+    "correct_sentence": "मेरो गल्तीका लागि म माफी चाहन्छु ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "माफि",
+      "correct_span": "माफी"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईं मलाई यो समस्यामा मद्दत गर्न सक्छ ?",
+    "correct_sentence": "के तपाईं मलाई यो समस्यामा मद्दत गर्न सक्नुहुन्छ ?",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सक्छ",
+      "correct_span": "सक्नुहुन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईं मलाई बुझाउन सक्नुहुन ?",
+    "correct_sentence": "के तपाईं मलाई बुझाउन सक्नुहुन्छ ?",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सक्नुहुन",
+      "correct_span": "सक्नुहुन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईं मलाई यो कसरी गर्ने भनेर देखाउनु सक्नुहुन्छ ?",
+    "correct_sentence": "के तपाईं मलाई यो कसरी गर्ने भनेर देखाउन सक्नुहुन्छ ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "देखाउनु",
+      "correct_span": "देखाउन"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईंले केही सल्लाह दिन सक्नुहुन्छ ?",
+    "correct_sentence": "के तपाईं केही सल्लाह दिन सक्नुहुन्छ ?",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "तपाईंले",
+      "correct_span": "तपाईं"
+    }
+  },
+  {
+    "incorrect_sentence": "म मेरो फुर्सदको समयमा रहस्य उपन्यास पढ्छु ।",
+    "correct_sentence": "म मेरो फुर्सदको समयमा रहस्य उपन्यासहरू पढ्छु ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "उपन्यास",
+      "correct_span": "उपन्यासहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "रोमान्टिक कमेडीले मलाई हँसाउँछन् ।",
+    "correct_sentence": "रोमान्टिक कमेडीहरूले मलाई हँसाउँछन् ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "कमेडीले",
+      "correct_span": "कमेडीहरूले"
+    }
+  },
+  {
+    "incorrect_sentence": "म सप्ताहन्तमा कार्टुनहरू हेर्न मन पराउँथ्यो ।",
+    "correct_sentence": "म सप्ताहन्तमा कार्टुनहरू हेर्न मन पराउँछु ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पराउँथ्यो",
+      "correct_span": "पराउँछु"
+    }
+  },
+  {
+    "incorrect_sentence": "म रेडियोमा मेरा मनपर्ने गीत सुन्छु ।",
+    "correct_sentence": "म रेडियोमा मेरा मनपर्ने गीतहरू सुन्छु ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गीत",
+      "correct_span": "गीतहरू"
+    }
+  },
+
+  {
+    "incorrect_sentence": "वातावरणलाई मद्दत गर्न रिसाइक्लिङ महत्वपुर्ण छ ।",
+    "correct_sentence": "वातावरणलाई मद्दत गर्न रिसाइक्लिङ महत्त्वपूर्ण छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "महत्वपुर्ण",
+      "correct_span": "महत्त्वपूर्ण"
+    }
+  },
+  {
+    "incorrect_sentence": "ऊर्जा बचत गर्न म कोठाबाट बाहिर निस्कँदा बत्ती निभाउँछु ।",
+    "correct_sentence": "ऊर्जा बचत गर्न म कोठाबाट बाहिर निस्कँदा बत्तीहरू निभाउँछु ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बत्ती",
+      "correct_span": "बत्तीहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "हावाको गुणस्तर सुधार गर्न हामीले धेरै रूख रोप्नुपर्छ ।",
+    "correct_sentence": "हावाको गुणस्तर सुधार गर्न हामीले धेरै रूखहरू रोप्नुपर्छ ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "रूख",
+      "correct_span": "रूखहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "केही शहरहरूमा प्रदूशण ठूलो समस्या हो ।",
+    "correct_sentence": "केही शहरहरूमा प्रदूषण ठूलो समस्या हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "प्रदूशण",
+      "correct_span": "प्रदूषण"
+    }
+  },
+  {
+    "incorrect_sentence": "म किनमेल गर्न जाँदा पुन प्रयोग गर्न मिल्ने झोलाहरू प्रयोग गर्छु ।",
+    "correct_sentence": "म किनमेल गर्न जाँदा पुनः प्रयोग गर्न मिल्ने झोलाहरू प्रयोग गर्छु ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पुन",
+      "correct_span": "पुनः"
+    }
+  },
+  {
+    "incorrect_sentence": "विश्वव्यापी तापक्रम वृद्धि हाम्रो ग्रहको लागि चिन्ताको विषय हुन् ।",
+    "correct_sentence": "विश्वव्यापी तापक्रम वृद्धि हाम्रो ग्रहको लागि चिन्ताको विषय हो ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो भाइ मेरो सबैभन्दा मिल्ने साथी हुन् ।",
+    "correct_sentence": "मेरो भाइ मेरो सबैभन्दा मिल्ने साथी हो ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "हामी सबै कुरा सँगै गर्छन् ।",
+    "correct_sentence": "हामी सबै कुरा सँगै गर्छौं ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्छन्",
+      "correct_span": "गर्छौं"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो स्कूलका साथीको घनिष्ठ समूह छ ।",
+    "correct_sentence": "मेरो स्कूलका साथीहरूको घनिष्ठ समूह छ ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "साथीको",
+      "correct_span": "साथीहरूको"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरी बहिनी र म एउटा कोठामा बसछौं, र हामी राम्रोसँग मिल्छौं ।",
+    "correct_sentence": "मेरी बहिनी र म एउटा कोठामा बस्छौं, र हामी राम्रोसँग मिल्छौं ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बसछौं",
+      "correct_span": "बस्छौं"
+    }
+  },
+
+  {
+    "incorrect_sentence": "मेरो सबैभन्दा मिल्ने साथी र म वर्षौंदेखि एकअर्कालाई चिन्छन् ।",
+    "correct_sentence": "मेरो सबैभन्दा मिल्ने साथी र म वर्षौंदेखि एकअर्कालाई चिन्छौं ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चिन्छन्",
+      "correct_span": "चिन्छौं"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई पिज्जा र ह्याम्बर्गर खानु मन पर्छ ।",
+    "correct_sentence": "मलाई पिज्जा र ह्याम्बर्गर खान मन पर्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खानु",
+      "correct_span": "खान"
+    }
+  },
+  {
+    "incorrect_sentence": "खाना पकाउनु मेरो बिसेस रुचि होइन, त्यसैले म प्राय अर्डर गर्छु ।",
+    "correct_sentence": "खाना पकाउनु मेरो विशेष रुचि होइन, त्यसैले म प्राय अर्डर गर्छु ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बिसेस",
+      "correct_span": "विशेष"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई टमाटर सससँग पास्ता खान मन परछ ।",
+    "correct_sentence": "मलाई टमाटर सससँग पास्ता खान मन पर्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "परछ",
+      "correct_span": "पर्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "म प्रायः दिउँसोको खानामा स्यान्डविच खाँदैछु ।",
+    "correct_sentence": "म प्रायः दिउँसोको खानामा स्यान्डविच खान्छु ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खाँदैछु",
+      "correct_span": "खान्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "म कफीभन्दा चिया पिउनलाई रुचाउँछु ।",
+    "correct_sentence": "म कफीभन्दा चिया पिउन रुचाउँछु ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पिउनलाई",
+      "correct_span": "पिउन"
+    }
+  },
+  {
+    "incorrect_sentence": "म कहिलेकाहीँ ब्रेकफास्टमा आमलेट बनाउछु ।",
+    "correct_sentence": "म कहिलेकाहीँ ब्रेकफास्टमा आमलेट बनाउँछु ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बनाउछु",
+      "correct_span": "बनाउँछु"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो मनपर्ने मिठाइ चकलेट आइसक्रिम हो ।",
+    "correct_sentence": "मेरो मनपर्ने मिठाई चकलेट आइसक्रिम हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मिठाइ",
+      "correct_span": "मिठाई"
+    }
+  },
+  {
+    "incorrect_sentence": "म पछिल्लो समय अलि बिरामी महसुस गरेँ ।",
+    "correct_sentence": "म पछिल्लो समय अलि बिरामी महसुस गरिरहेको छु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गरेँ",
+      "correct_span": "गरिरहेको छु"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई जाँचको लागि डाक्टर भेट्नु पर्छ ।",
+    "correct_sentence": "मलाई जाँचको लागि डाक्टरलाई भेट्नु पर्छ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "डाक्टर",
+      "correct_span": "डाक्टरलाई"
+    }
+  },
+  {
+    "incorrect_sentence": "म हाइड्रेटेड रहन धेरै पानी पिइरहेको छ ।",
+    "correct_sentence": "म हाइड्रेटेड रहन धेरै पानी पिइरहेको छु ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छु"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई फुर्सदको समयमा किताबहरू पढ्न मन परछ ।",
+    "correct_sentence": "मलाई फुर्सदको समयमा किताबहरू पढ्न मन पर्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "परछ",
+      "correct_span": "पर्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "भिडियो गेम खेल्नु मेरो मनपर्ने शौख हो ।",
+    "correct_sentence": "भिडियो गेम खेल्नु मेरो मनपर्ने शौक हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "शौख",
+      "correct_span": "शौक"
+    }
+  },
+  {
+    "incorrect_sentence": "बगैंचा मेरो लागि आरामदायी शौक थियो ।",
+    "correct_sentence": "बगैंचा मेरो लागि आरामदायी शौक हो ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "थियो",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "म प्रायः सप्ताहन्तमा मेरा साथीसँग माछा मार्ने गर्छु ।",
+    "correct_sentence": "म प्रायः सप्ताहन्तमा मेरा साथीहरूसँग माछा मार्ने गर्छु ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "साथीसँग",
+      "correct_span": "साथीहरूसँग"
+    }
+  },
+  {
+    "incorrect_sentence": "फुर्सदको समयमा म धेरै टिभी कार्यक्रम हेर्छु ।",
+    "correct_sentence": "फुर्सदको समयमा म धेरै टिभी कार्यक्रमहरू हेर्छु ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "कार्यक्रम",
+      "correct_span": "कार्यक्रमहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरो शौक विभिन्न देशबाट टिकटहरू सङ्कलन गर्नु हो ।",
+    "correct_sentence": "मेरो शौक विभिन्न देशहरूबाट टिकटहरू सङ्कलन गर्नु हो ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "देशबाट",
+      "correct_span": "देशहरूबाट"
+    }
+  },
+  {
+    "incorrect_sentence": "यो मेरो पहिलो पटक हुन् ।",
+    "correct_sentence": "यो मेरो पहिलो पटक हो ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई लाग्दैन कि हामी पहिले भेटेका छौ ।",
+    "correct_sentence": "मलाई लाग्दैन कि हामी पहिले भेटेका छौं ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छौं"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई आफ्नो परिचय दिनु होस् ।",
+    "correct_sentence": "मलाई आफ्नो परिचय दिनुहोस् ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दिनु होस्",
+      "correct_span": "दिनुहोस्"
+    }
+  },
+  {
+    "incorrect_sentence": "नमस्ते, म जेसिका हु ।",
+    "correct_sentence": "नमस्ते, म जेसिका हुँ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हु",
+      "correct_span": "हुँ"
+    }
+  },
+  {
+    "incorrect_sentence": "नाम के हो तिम्रो ?",
+    "correct_sentence": "तिम्रो नाम के हो ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "नाम के हो तिम्रो",
+      "correct_span": "तिम्रो नाम के हो"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईं सँगै खाजा खानु चाहनुहुन्छ ?",
+    "correct_sentence": "के तपाईं सँगै खाजा खान चाहनुहुन्छ ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "खानु",
+      "correct_span": "खान"
+    }
+  },
+  {
+    "incorrect_sentence": "म आज राती खाना पकाउने योजनामा छ ।",
+    "correct_sentence": "म आज राती खाना पकाउने योजनामा छु ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छु"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईं अनलाइन अंग्रेजी सिक्नका लागि कुनै वेबसाइटहरू सुझाव दिन सक्नुहुन्छ ?",
+    "correct_sentence": "के तपाईं अनलाइन अंग्रेजी सिक्नको लागि कुनै वेबसाइटहरू सुझाव दिन सक्नुहुन्छ ?",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सिक्नका",
+      "correct_span": "सिक्नको"
+    }
+  },
+  {
+    "incorrect_sentence": "अङ्ग्रेजी व्याकरण भ्रामक हुन सक्छ, तर म यसमा काम गर्दैछु ।",
+    "correct_sentence": "अङ्ग्रेजी व्याकरण भ्रामक हुन सक्छ, तर म यसमा काम गरिरहेको छु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्दैछु",
+      "correct_span": "गरिरहेको छु"
+    }
+  },
+  {
+    "incorrect_sentence": "के म शुक्रबार कपाल काट्ने समय मिलाउन सक्छ ?",
+    "correct_sentence": "के म शुक्रबार कपाल काट्ने समय मिलाउन सक्छु ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सक्छ",
+      "correct_span": "सक्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "म चाहन्छु मिलाउन तपाईंसँग भेटघाटको समय ।",
+    "correct_sentence": "म तपाईंसँग भेटघाटको समय मिलाउन चाहन्छु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चाहन्छु मिलाउन तपाईंसँग भेटघाटको समय",
+      "correct_span": "तपाईंसँग भेटघाटको समय मिलाउन चाहन्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "के अर्को हप्ताको लागि डाक्टरको भेटघाटको समय मिलाउन सम्भव हुन् ?",
+    "correct_sentence": "के अर्को हप्ताको लागि डाक्टरको भेटघाटको समय मिलाउन सम्भव छ ?",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "छ"
+    }
+  },
+  {
+    "incorrect_sentence": "म तपाईंको रेस्टुरेन्टमा टेबलका लागि आरक्षण गर्न चाहन्छु ।",
+    "correct_sentence": "म तपाईंको रेस्टुरेन्टमा टेबलको लागि आरक्षण गर्न चाहन्छु ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "टेबलका",
+      "correct_span": "टेबलको"
+    }
+  },
+  {
+    "incorrect_sentence": "जागिरको अन्तर्वार्ताको लागि के हामी समय मिलाउन सक्छौं ?",
+    "correct_sentence": "के हामी जागिरको अन्तर्वार्ताको लागि समय मिलाउन सक्छौं ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जागिरको अन्तर्वार्ताको लागि के हामी",
+      "correct_span": "के हामी जागिरको अन्तर्वार्ताको लागि"
+    }
+  },
+  {
+    "incorrect_sentence": "हाम्रो परियोजनाको बारेमा छलफल गर्न बैठकको योजना बनाउनु होस् ।",
+    "correct_sentence": "हाम्रो परियोजनाको बारेमा छलफल गर्न बैठकको योजना बनाउनुहोस् ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बनाउनु होस्",
+      "correct_span": "बनाउनुहोस्"
+    }
+  },
+  {
+    "incorrect_sentence": "म दन्त चिकित्सकसँग भेटघाटको समय बुक गर्न चाहन्थ्यो ।",
+    "correct_sentence": "म दन्त चिकित्सकसँग भेटघाटको समय बुक गर्न चाहन्छु ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चाहन्थ्यो",
+      "correct_span": "चाहन्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "म डेटमा जान र नयाँ मानिसहरूलाई भेट्न मन पराउँछन् ।",
+    "correct_sentence": "म डेटमा जान र नयाँ मानिसहरूलाई भेट्न मन पराउँछु ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पराउँछन्",
+      "correct_span": "पराउँछु"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईं कुरा गर्न पाउँदा राम्रो लाग्यो ।",
+    "correct_sentence": "तपाईंले कुरा गर्न पाउँदा राम्रो लाग्यो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "तपाईं",
+      "correct_span": "तपाईंले"
+    }
+  },
+  {
+    "incorrect_sentence": "म तपाईंसँग चाँडै कुरा गर्ने छौँ ।",
+    "correct_sentence": "म तपाईंसँग चाँडै कुरा गर्नेछु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्ने छौँ",
+      "correct_span": "गर्नेछु"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईंको सहयोगको लागि धेरै धेरै धन्यवाद हुन् ।",
+    "correct_sentence": "तपाईंको सहयोगको लागि धेरै धेरै धन्यवाद छ ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "छ"
+    }
+  },
+  {
+    "incorrect_sentence": "आज रात मेरो धेरै गृहकार्य छैन ।",
+    "correct_sentence": "आज राती मेरो धेरै गृहकार्य छैन ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "रात",
+      "correct_span": "राती"
+    }
+  },
+  {
+    "incorrect_sentence": "म पसलबाट किराना सामानहरू केही लिनु पर्छ ।",
+    "correct_sentence": "म पसलबाट केही किराना सामानहरू लिनु पर्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "किराना सामानहरू केही",
+      "correct_span": "केही किराना सामानहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "आज मौसम कस्तो छौ ?",
+    "correct_sentence": "आज मौसम कस्तो छ ?",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छ"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईंले हालसालै कुनै राम्रो चलचित्र हेर्नुभएको थियो ?",
+    "correct_sentence": "के तपाईंले हालसालै कुनै राम्रो चलचित्र हेर्नुभएको छ ?",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "थियो",
+      "correct_span": "छ"
+    }
+  },
+  {
+    "incorrect_sentence": "के तपाईंको सप्ताहांतको लागि कुनै योजना छन् ?",
+    "correct_sentence": "के तपाईंको सप्ताहांतको लागि कुनै योजना छ ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छन्",
+      "correct_span": "छ"
+    }
+  },
+  {
+    "incorrect_sentence": "मैले सुनेको छु कि नजिकै एउटा नयाँ रेष्टुरेन्ट खुल्दैछ ।",
+    "correct_sentence": "मैले सुनेको छु कि नजिकै एउटा नयाँ रेस्टुरेन्ट खुल्दैछ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "रेष्टुरेन्ट",
+      "correct_span": "रेस्टुरेन्ट"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईंको मनपर्ने शौक वा मनोरञ्जन के हुन् ?",
+    "correct_sentence": "तपाईंको मनपर्ने शौक वा मनोरञ्जन के हो ?",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "दिन कस्तो भयो तपाईंको ?",
+    "correct_sentence": "तपाईंको दिन कस्तो भयो ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दिन कस्तो भयो तपाईंको",
+      "correct_span": "तपाईंको दिन कस्तो भयो"
+    }
+  },
+  {
+    "incorrect_sentence": "म भर्खरै नयाँ स्मार्टफोन लिएको छु ।",
+    "correct_sentence": "मैले भर्खरै नयाँ स्मार्टफोन लिएको छु ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "म",
+      "correct_span": "मैले"
+    }
+  },
+  {
+    "incorrect_sentence": "सामाजिक सञ्जालले मलाई परिवारसँग सम्पर्कमा रहन मदत गर्छ ।",
+    "correct_sentence": "सामाजिक सञ्जालले मलाई परिवारसँग सम्पर्कमा रहन मद्दत गर्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मदत",
+      "correct_span": "मद्दत"
+    }
+  },
+  {
+    "incorrect_sentence": "आजकल प्रविधि धेरै छिटो अगाडि बढिरहेको छन् ।",
+    "correct_sentence": "आजकल प्रविधि धेरै छिटो अगाडि बढिरहेको छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बढिरहेको छन्",
+      "correct_span": "बढिरहेको छ"
+    }
+  },
+  {
+    "incorrect_sentence": "म यस गर्मीमा समुद्र किनारमा बिदा मनाउने योजना बनाउँदै छ ।",
+    "correct_sentence": "म यस गर्मीमा समुद्र किनारमा बिदा मनाउने योजना बनाउँदै छु ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "छु"
+    }
+  },
+  {
+    "incorrect_sentence": "म भविष्यमा थप देश अन्वेषण गर्न चाहन्छु ।",
+    "correct_sentence": "म भविष्यमा थप देशहरू अन्वेषण गर्न चाहन्छु ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "देश",
+      "correct_span": "देशहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "म मेरो अर्को यात्राको लागि उडान बुक गर्ने बारेमा सोचिरहेका छु ।",
+    "correct_sentence": "म मेरो अर्को यात्राको लागि उडान बुक गर्ने बारेमा सोचिरहेको छु ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सोचिरहेका",
+      "correct_span": "सोचिरहेको"
+    }
+  },
+  {
+    "incorrect_sentence": "मौसम पुर्वानुमानले भोलि हिउँ पर्न सक्छ भन्छ ।",
+    "correct_sentence": "मौसम पूर्वानुमानले भोलि हिउँ पर्न सक्छ भन्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पुर्वानुमानले",
+      "correct_span": "पूर्वानुमानले"
+    }
+  },
+  {
+    "incorrect_sentence": "हाल मौसम अप्रत्यासीत भएको छ ।",
+    "correct_sentence": "हाल मौसम अप्रत्याशित भएको छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "अप्रत्यासीत",
+      "correct_span": "अप्रत्याशित"
+    }
+  },
+  {
+    "incorrect_sentence": "म स्थानीय विद्यालयमा शिक्षकको रूपमा काम गर्दछु ।",
+    "correct_sentence": "म स्थानीय विद्यालयमा शिक्षकको रूपमा काम गर्छु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्दछु",
+      "correct_span": "गर्छु"
+    }
+  },
+  {
+    "incorrect_sentence": "म आज मेरो हाकिमसँग भेटघाट गर्ने छौँ ।",
+    "correct_sentence": "म आज मेरो हाकिमसँग भेटघाट गर्नेछु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्ने छौँ",
+      "correct_span": "गर्नेछु"
+    }
+  },
+  {
+    "incorrect_sentence": "म नयाँ जागिर फरक क्षेत्रमा खोजिरहेको छु ।",
+    "correct_sentence": "म फरक क्षेत्रमा नयाँ जागिर खोजिरहेको छु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "नयाँ जागिर फरक क्षेत्रमा",
+      "correct_span": "फरक क्षेत्रमा नयाँ जागिर"
+    }
+  },
+  {
+    "incorrect_sentence": "तपाईं के गर्नुहुन्छ जीविकोपार्जनको लागि ?",
+    "correct_sentence": "तपाईं जीविकोपार्जनको लागि के गर्नुहुन्छ ?",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "के गर्नुहुन्छ जीविकोपार्जनको लागि",
+      "correct_span": "जीविकोपार्जनको लागि के गर्नुहुन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "म नातागोता हेर्दैन ।",
+    "correct_sentence": "म नातागोता हेर्दिनँ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हेर्दैन",
+      "correct_span": "हेर्दिनँ"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी हाम्रो घरमा आउँदा मलाई निकै डर लाग्थे ।",
+    "correct_sentence": "उनी हाम्रो घरमा आउँदा मलाई निकै डर लाग्थ्यो ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "लाग्थे",
+      "correct_span": "लाग्थ्यो"
+    }
+  },
+  {
+    "incorrect_sentence": "सरकारले पनि खर्च बढाउने उपाय निकाल्नुपर्छन् ।",
+    "correct_sentence": "सरकारले पनि खर्च बढाउने उपाय निकाल्नुपर्छ ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "निकाल्नुपर्छन्",
+      "correct_span": "निकाल्नुपर्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "डिएनए परीक्षण गरिएका पाँचै जनाको नमूनाको नतिजा नेगेटिभ आएको छ ।",
+    "correct_sentence": "डिएनए परीक्षण गरिएका पाँचै जनाको नमूनाको नतिजा नेगेटिभ आएको थियो ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": "थियो"
+    }
+  },
+  {
+    "incorrect_sentence": "यो कूल पोलिग्राफ टेस्टको जम्मा ६ प्रतिशतमात्र हुन् ।",
+    "correct_sentence": "यो कूल पोलिग्राफ टेस्टको जम्मा ६ प्रतिशतमात्र हो ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "आन्तरिक राजस्वले चालू खर्च पनि धान्न नपुग्ने अवस्था छौ ।",
+    "correct_sentence": "आन्तरिक राजस्वले चालू खर्च पनि धान्न नपुग्ने अवस्था छ ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छ"
+    }
+  },
+  {
+    "incorrect_sentence": "सरकारले दलगत स्वार्थलाई मात्र प्राथमिकता दिएर ल्याउने नीति र कार्यक्रम जनस्तरबाट अस्वीकार गर्ने आँट पनि गर्नुपर्यो ।",
+    "correct_sentence": "सरकारले दलगत स्वार्थलाई मात्र प्राथमिकता दिएर ल्याउने नीति र कार्यक्रम जनस्तरबाट अस्वीकार गर्ने आँट पनि गर्नुपर्छ ।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गर्नुपर्यो",
+      "correct_span": "गर्नुपर्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "यसबाट समय र पैसा दुवै नोक्सान भइरहेका उनले बताए ।",
+    "correct_sentence": "यसबाट समय र पैसा दुवै नोक्सान भइरहेको उनले बताए ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भइरहेका",
+      "correct_span": "भइरहेको"
+    }
+  },
+  {
+    "incorrect_sentence": "त्यसैले कांग्रेससँगको सहकार्य यति सहज छ जस्तो लाग्दैनन् ।",
+    "correct_sentence": "त्यसैले कांग्रेससँगको सहकार्य यति सहज छ जस्तो लाग्दैन ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "लाग्दैनन्",
+      "correct_span": "लाग्दैन"
+    }
+  },
+  {
+    "incorrect_sentence": "उनले कक्षा तीनसम्म मात्र पढ्न पायो ।",
+    "correct_sentence": "उनले कक्षा तीनसम्म मात्र पढ्न पाए ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "पायो",
+      "correct_span": "पाए"
+    }
+  },
+  {
+    "incorrect_sentence": "मोटरसाइकल हानेर छोराको मृत्यु भयो ।",
+    "correct_sentence": "मोटरसाइकलले हानेर छोराको मृत्यु भयो ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मोटरसाइकल",
+      "correct_span": "मोटरसाइकलले"
+    }
+  },
+  {
+    "incorrect_sentence": "परीक्षा मर्यादित बनाउन सबै सचेत हुनुपर्छन् ।",
+    "correct_sentence": "परीक्षा मर्यादित बनाउन सबै सचेत हुनुपर्छ ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुनुपर्छन्",
+      "correct_span": "हुनुपर्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "यसैवर्ष विवाह गरेका ह्यारीको जन्म सन् १९८४ सेप्टेम्बर १५ मा भएका हो ।",
+    "correct_sentence": "यसैवर्ष विवाह गरेका ह्यारीको जन्म सन् १९८४ सेप्टेम्बर १५ मा भएको हो ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "भएका",
+      "correct_span": "भएको"
+    }
+  },
+  {
+    "incorrect_sentence": "उहाँ आज विद्यालय जान्छु।",
+    "correct_sentence": "उहाँ आज विद्यालय जानुहुन्छ।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छु",
+      "correct_span": "जानुहुन्छ"
+    }
+  },
+ 
+  {
+    "incorrect_sentence": "यस्तोमा नरिवलको तेल मानिन्छ सबैभन्दा उत्तम ।",
+    "correct_sentence": "यस्तोमा नरिवलको तेल सबैभन्दा उत्तम मानिन्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मानिन्छ सबैभन्दा उत्तम",
+      "correct_span": "सबैभन्दा उत्तम मानिन्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई चित्रकला मन पर्छ रचनात्मक आउटलेटको रूपमा ।",
+    "correct_sentence": "मलाई रचनात्मक आउटलेटको रूपमा चित्रकला मन पर्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "चित्रकला मन पर्छ रचनात्मक आउटलेटको रूपमा",
+      "correct_span": "रचनात्मक आउटलेटको रूपमा चित्रकला मन पर्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "मेरा आमाबाबु हुन् मेरो लागि संसार ।",
+    "correct_sentence": "मेरा आमाबाबु मेरो लागि संसार हुन् ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन् मेरो लागि संसार",
+      "correct_span": "मेरो लागि संसार हुन्"
+    }
+  },
+  {
+    "incorrect_sentence": "म भाँडा माझ्दा पानी फाल्ने खेर प्रयास गर्दिन ।",
+    "correct_sentence": "म भाँडा माझ्दा पानी खेर फाल्ने प्रयास गर्दिन ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "फाल्ने खेर",
+      "correct_span": "खेर फाल्ने"
+    }
+  },
+  {
+    "incorrect_sentence": "मलाई एक्सन चलचित्र हेर्न मन पर्छ र पप संगीत सुन्न ।",
+    "correct_sentence": "मलाई एक्सन चलचित्र हेर्न र पप संगीत सुन्न मन पर्छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "मन पर्छ र पप संगीत सुन्न",
+      "correct_span": "र पप संगीत सुन्न मन पर्छ"
+    }
+  },
+  {
+    "incorrect_sentence": "मैले गरेको कुनै पनि लागि असुविधाको म धेरै माफी चाहन्छु ।",
+    "correct_sentence": "मैले गरेको कुनै पनि असुविधाको लागि म धेरै माफी चाहन्छु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "लागि असुविधाको म",
+      "correct_span": "असुविधाको लागि म"
+    }
+  },
+  {
+    "incorrect_sentence": "उनीहरु गए घर ।",
+    "correct_sentence": "उनीहरु घर गए ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गए घर",
+      "correct_span": "घर गए"
+    }
+  },
+  {
+    "incorrect_sentence": "म बिहान उठ्छु अनि कफी बनाउँछु खाँदै ।",
+    "correct_sentence": "म बिहान उठ्छु अनि खाँदै कफी बनाउँछु ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "कफी बनाउँछु खाँदै",
+      "correct_span": "खाँदै कफी बनाउँछु"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी साथी भेट्न गएको मलाई देखे ।",
+    "correct_sentence": "उनी साथी भेट्न गएकोले मलाई देखे ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गएको",
+      "correct_span": "गएकोले"
+    }
+  },
+  {
+    "incorrect_sentence": "सात बजे बजार जान्छु ।",
+    "correct_sentence": "सात बजे बजारमा जान्छु ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बजार",
+      "correct_span": "बजारमा"
+    }
+  },
+  {
+    "incorrect_sentence": "म घर विद्यालय जाँदैछु ।",
+    "correct_sentence": "म घरबाट विद्यालय जाँदैछु ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "घर",
+      "correct_span": "घरबाट"
+    }
+  },
+  {
+    "incorrect_sentence": "यहाँ नयाँ उद्योग खोल्न चाहनेलाई राज्य केही सहुलियत दिनुपर्छ ।",
+    "correct_sentence": "यहाँ नयाँ उद्योग खोल्न चाहनेलाई राज्यले केही सहुलियत दिनुपर्छ ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "राज्य",
+      "correct_span": "राज्यले"
+    }
+  },
+  {
+    "incorrect_sentence": "मैले पत्र डाकमा पठाएँ।",
+    "correct_sentence": "मैले पत्र डाकघरमा पठाएँ।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "डाकमा",
+      "correct_span": "डाकघरमा"
+    }
+  },
+  {
+    "incorrect_sentence": "आमा एक महान व्यक्ति हुन् जसले हामीलाई यस सुन्दर पृथ्वीमा जन्म दिनुभएको हो ।",
+    "correct_sentence": "आमा एक महान व्यक्ति हुन् जसले हामीलाई यस सुन्दर पृथ्वीमा जन्म दिनुभएको हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "आमा पक्कै पनि सबैको जीवनमा सबभन्दा महत्वपूर्ण मानव हुनुहुन्छ ।",
+    "correct_sentence": "आमा पक्कै पनि सबैको जीवनमा सबैभन्दा महत्वपूर्ण मानव हुनुहुन्छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "सबभन्दा",
+      "correct_span": "सबैभन्दा"
+    }
+  },
+  {
+    "incorrect_sentence": "उनी परिवारको भावनात्मक मेरुदण्ड हुन् ।",
+    "correct_sentence": "उनी परिवारको भावनात्मक मेरुदण्ड हुन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "यसमा प्राकृतिक र मानव निर्मित पक्षहरु सामेल छन् ।",
+    "correct_sentence": "यसमा प्राकृतिक र मानव निर्मित पक्षहरु सामेल छन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "हावा, पानी, आकाश, घर, भवन आदि वातावरणका केही अंशहरू हुन् ।",
+    "correct_sentence": "हावा, पानी, आकाश, घर, भवन आदि वातावरणका केही अंशहरू हुन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "नेपाल भारत र चीन बीचको सानो देश हो ।",
+    "correct_sentence": "नेपाल भारत र चीन बीचको सानो देश हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "उनी आफ्नो बच्चाको सुरक्षाको लागि कुनै पनि सीमा पार गर्न सक्छिन् ।",
+    "correct_sentence": "उनी आफ्नो बच्चाको सुरक्षाको लागि कुनै पनि सीमा पार गर्न सक्छिन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "आमाहरू सबै परिवारको मेरुदण्ड हुन् जसले सम्पूर्ण परिवारलाई बाँध्छ र एकजुट गर्दछ ।",
+    "correct_sentence": "आमाहरू सबै परिवारको मेरुदण्ड हुन् जसले सम्पूर्ण परिवारलाई बाँध्छ र एकजुट गर्दछ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "चीन उत्तरमा र भारत पूर्व, पश्चिम र दक्षिणमा अवस्थित छ ।",
+    "correct_sentence": "चीन उत्तरमा र भारत पूर्व, पश्चिम र दक्षिणमा अवस्थित छ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "यो पर्वको पहिलो नौ दिन दुर्गा र महिषासुरको बिभिन्न अभिव्यक्तिको बीचमा भएको युद्धको प्रतीक हो ।",
+    "correct_sentence": "यो पर्वको पहिलो नौ दिन दुर्गा र महिषासुरको विभिन्न अभिव्यक्तिको बीचमा भएको युद्धको प्रतीक हो ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "बिभिन्न",
+      "correct_span": "विभिन्न"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा तीन भौगोलिक क्षेत्र छन् ।",
+    "correct_sentence": "नेपालमा तीन भौगोलिक क्षेत्र छन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "हिमाली छत्रले  पैतिस प्रतिसत  नेपालको जमिन ओगटेको छ ।",
+    "correct_sentence": "हिमाली छत्रले पैतिस प्रतिशत नेपालको जमिन ओगटेको छ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "प्रतिसत",
+      "correct_span": "प्रतिशत"
+    }
+  },
+  {
+    "incorrect_sentence": "यो विक्रम सम्बद्ध क्यालेन्डरमा सबैभन्दा लामो र महत्त्वपूर्ण चाडपर्व हो जुन नेपालीहरूले मनाउँदछन् ।",
+    "correct_sentence": "यो विक्रम सम्बद्ध क्यालेन्डरमा सबैभन्दा लामो र महत्त्वपूर्ण चाडपर्व हो जुन नेपालीहरूले मनाउँदछन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "सबै उमेरका मानिसहरूले आकाशमा चंगा उडाएर दशैं मनाउने गर्दाछन् ।",
+    "correct_sentence": "सबै उमेरका मानिसहरूले आकाशमा चंगा उडाएर दशैं मनाउने गर्दाछन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "अभिभावकहरूले आफ्ना बच्चाहरूको लागि नयाँ लुगा किन्छन् ।",
+    "correct_sentence": "अभिभावकहरूले आफ्ना बच्चाहरूको लागि नयाँ लुगा किन्छन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "यो पर्वको पहिलो नौ दिन दुर्गा र महिषासुरको बिभिन्न अभिव्यक्तिको बीचमा भएको युद्धको प्रतीक हो ।",
+    "correct_sentence": "यो पर्वको पहिलो नौ दिन दुर्गा र महिषासुरको बिभिन्न अभिव्यक्तिको बीचमा भएको युद्धको प्रतीक हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "स्कूलमा, विद्यार्थीहरूले आफ्नो व्यक्तित्व विकास गर्छन् ।",
+    "correct_sentence": "स्कूलमा, विद्यार्थीहरूले आफ्नो व्यक्तित्व विकास गर्छन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "शिक्षकहरुले विद्यार्थीहरूलाई धर्म र नैतिकताको बारेमा सिकाउँछन् ।",
+    "correct_sentence": "शिक्षकहरूले विद्यार्थीहरूलाई धर्म र नैतिकताको बारेमा सिकाउँछन् ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "शिक्षकहरुले",
+      "correct_span": "शिक्षकहरूले"
+    }
+  },
+  {
+    "incorrect_sentence": "स्कूलहरूले मानिसहरुलाई सामाजिक रूपले मान्यता र व्यवहार पहिचान गर्न मद्दत गर्दछ ।",
+    "correct_sentence": "स्कूलहरूले मानिसहरुलाई सामाजिक रूपले मान्यता र व्यवहार पहिचान गर्न मद्दत गर्दछ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "यो राष्ट्रको चरित्र निर्माण गर्ने  एक उपकरण हो ।",
+    "correct_sentence": "यो राष्ट्रको चरित्र निर्माण गर्ने एक उपकरण हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "हामी ज्ञान बिना केहि पनि छैनौं, र शिक्षा नै हामीलाई अरूबाट अलग गर्दछ ।",
+    "correct_sentence": "हामी ज्ञान बिना केही पनि छैनौं, र शिक्षा नै हामीलाई अरूबाट अलग गर्दछ ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "केहि",
+      "correct_span": "केही"
+    }
+  },
+  {
+    "incorrect_sentence": "शिक्षा हासिल गर्ने मुख्य चरण भनेको स्कूलमा भर्ना हुनु हो ।",
+    "correct_sentence": "शिक्षा हासिल गर्ने मुख्य चरण भनेको स्कूलमा भर्ना हुनु हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "अधिकांश मानिसहरूको लागि स्कूल पहिलो शिक्षा र ज्ञान प्राप्त स्थान हो ।",
+    "correct_sentence": "अधिकांश मानिसहरूको लागि स्कूल पहिलो शिक्षा र ज्ञान प्राप्त स्थान हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "सूर्य पूर्व दिशा तिर उदाउँछ ।",
+    "correct_sentence": "सूर्य पूर्व दिशा तिर उदाउँछ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+   "incorrect_sentence": "नेपाल हिमालहरूको देश हो ।",
+    "correct_sentence": "नेपाल हिमालहरूको देश हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "विद्यार्थीहरूले आफ्नो गृहकार्य समयमै पूरा गरे ।",
+    "correct_sentence": "विद्यार्थीहरूले आफ्नो गृहकार्य समयमै पूरा गरे ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "बगैंचामा रंगीबिरंगी फूलहरू फुलेका छन् ।",
+    "correct_sentence": "बगैंचामा रंगीबिरंगी फूलहरू फुलेका छन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "हामीले पुस्तकालयमा नयाँ किताबहरू भेट्यौं ।",
+    "correct_sentence": "हामीले पुस्तकालयमा नयाँ किताबहरू भेट्यौं ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "बजारमा तरकारी र फलफूलहरू उपलब्ध छन् ।",
+    "correct_sentence": "बजारमा तरकारी र फलफूलहरू उपलब्ध छन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा तीन भौगोलिक क्षेत्रहरू छन् ।",
+    "correct_sentence": "नेपालमा तीन भौगोलिक क्षेत्रहरू छन् ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "पढाइको लागी ध्यान दिनु अत्यन्त आवश्यक छ ।",
+    "correct_sentence": "पढाइको लागि ध्यान दिनु अत्यन्त आवश्यक छ ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "सुरक्षित यात्रा गर्नु सबैको कर्तव्य हो ।",
+    "correct_sentence": "सुरक्षित यात्रा गर्नु सबैको कर्तव्य हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "पानी सरसफाइको लागि सबैभन्दा महत्वपूर्ण तत्व हो ।",
+    "correct_sentence": "पानी सरसफाइको लागि सबैभन्दा महत्वपूर्ण तत्व हो ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+{
+"incorrect_sentence": "उनी विद्यालय जानुहुन्छ थियो ।",
+"correct_sentence": "उनी विद्यालय जानुहुन्थ्यो ।",
+"error_type": "AUX",
+"edit": {
+"operation": "REPLACE",
+"incorrect_span": "जानुहुन्छ थियो",
+"correct_span": "जानुहुन्थ्यो"
+}
+},
+{
+"incorrect_sentence": "हामी खेल्दै छ ।",
+"correct_sentence": "हामी खेल्दै छौं ।",
+"error_type": "AUX",
+"edit": {
+"operation": "REPLACE",
+"incorrect_span": "छ",
+"correct_span": "छौं"
+}
+},
+{
+"incorrect_sentence": "उनी घर गएको छ ।",
+"correct_sentence": "उनी घर गएका छन् ।",
+"error_type": "AUX",
+"edit": {
+"operation": "REPLACE",
+"incorrect_span": "छ",
+"correct_span": "छन्"
+}
+},
+{
+"incorrect_sentence": "हजुर आज कता जान्छौ ?",
+"correct_sentence": "हजुर आज कता जानुहुन्छ ?",
+"error_type": "HONORIFIC",
+"edit": {
+"operation": "REPLACE",
+"incorrect_span": "जान्छौ",
+"correct_span": "जानुहुन्छ"
+}
+},
+{
+"incorrect_sentence": "बुबाले खाना खान्छ ।",
+"correct_sentence": "बुबाले खाना खानुहुन्छ ।",
+"error_type": "HONORIFIC",
+"edit": {
+"operation": "REPLACE",
+"incorrect_span": "खान्छ",
+"correct_span": "खानुहुन्छ"
+}
+},
+{
+"incorrect_sentence": "कक्षामा धेरै विद्यार्थी छ ।",
+"correct_sentence": "कक्षामा धेरै विद्यार्थी छन् ।",
+"error_type": "NOUN:NUM",
+"edit": {
+"operation": "REPLACE",
+"incorrect_span": "छ",
+"correct_span": "छन्"
+}
+},
+{
+"incorrect_sentence": "मेरो दुई वटा किताब छ ।",
+"correct_sentence": "मेरो दुई वटा किताब छन् ।",
+"error_type": "NOUN:NUM",
+"edit": {
+"operation": "REPLACE",
+"incorrect_span": "छ",
+"correct_span": "छन्"
+}
+},
+{
+"incorrect_sentence": "नेपाल एक सुन्दर देश हो ।",
+"correct_sentence": "नेपाल एक सुन्दर देश हो ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "प्रविधिको विकासले हाम्रो जीवनलाई सजिलो बनाएको छ ।",
+"correct_sentence": "प्रविधिको विकासले हाम्रो जीवनलाई सजिलो बनाएको छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "नियमित व्यायाम स्वास्थ्यका लागि अत्यन्त लाभदायक हुन्छ ।",
+"correct_sentence": "नियमित व्यायाम स्वास्थ्यका लागि अत्यन्त लाभदायक हुन्छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "कृषि नेपालको मुख्य आर्थिक आधार हो ।",
+"correct_sentence": "कृषि नेपालको मुख्य आर्थिक आधार हो ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "वैज्ञानिक अनुसन्धानले नयाँ आविष्कारहरू जन्माउँछ ।",
+"correct_sentence": "वैज्ञानिक अनुसन्धानले नयाँ आविष्कारहरू जन्माउँछ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "सञ्चार माध्यमहरूले सूचना छिटो प्रसारण गर्छन् ।",
+"correct_sentence": "सञ्चार माध्यमहरूले सूचना छिटो प्रसारण गर्छन् ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "सार्वजनिक यातायात प्रयोग गर्नु वातावरणका लागि राम्रो हुन्छ ।",
+"correct_sentence": "सार्वजनिक यातायात प्रयोग गर्नु वातावरणका लागि राम्रो हुन्छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "बैंकले ग्राहकलाई विभिन्न वित्तीय सेवा प्रदान गर्छ ।",
+"correct_sentence": "बैंकले ग्राहकलाई विभिन्न वित्तीय सेवा प्रदान गर्छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "जलवायु परिवर्तन विश्वव्यापी चुनौती हो ।",
+"correct_sentence": "जलवायु परिवर्तन विश्वव्यापी चुनौती हो ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "सांस्कृतिक विविधताले समाजलाई समृद्ध बनाउँछ ।",
+"correct_sentence": "सांस्कृतिक विविधताले समाजलाई समृद्ध बनाउँछ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "कानूनको पालना गर्नु प्रत्येक नागरिकको कर्तव्य हो ।",
+"correct_sentence": "कानूनको पालना गर्नु प्रत्येक नागरिकको कर्तव्य हो ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "खेलकुदले शारीरिक र मानसिक स्वास्थ्य सुधार गर्छ ।",
+"correct_sentence": "खेलकुदले शारीरिक र मानसिक स्वास्थ्य सुधार गर्छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "अन्तरिक्ष अनुसन्धानले ब्रह्माण्डका रहस्यहरू उजागर गर्छ ।",
+"correct_sentence": "अन्तरिक्ष अनुसन्धानले ब्रह्माण्डका रहस्यहरू उजागर गर्छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "साहित्यले समाजको यथार्थ चित्रण गर्दछ ।",
+"correct_sentence": "साहित्यले समाजको यथार्थ चित्रण गर्दछ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "डिजिटल सुरक्षाले व्यक्तिगत जानकारी सुरक्षित राख्छ ।",
+"correct_sentence": "डिजिटल सुरक्षाले व्यक्तिगत जानकारी सुरक्षित राख्छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "आजको मौसम सफा र घाम लागेको छ ।",
+"correct_sentence": "आजको मौसम सफा र घाम लागेको छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "उद्यमशीलताले रोजगारी सिर्जना गर्न मद्दत गर्छ ।",
+"correct_sentence": "उद्यमशीलताले रोजगारी सिर्जना गर्न मद्दत गर्छ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "इतिहासले विगतका घटनाहरूबाट पाठ सिकाउँछ ।",
+"correct_sentence": "इतिहासले विगतका घटनाहरूबाट पाठ सिकाउँछ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "नविकरणीय ऊर्जाले वातावरणीय प्रदूषण घटाउँछ ।",
+"correct_sentence": "नविकरणीय ऊर्जाले वातावरणीय प्रदूषण घटाउँछ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+"incorrect_sentence": "सकारात्मक सोचले व्यक्तिको आत्मविश्वास बढाउँछ ।",
+"correct_sentence": "सकारात्मक सोचले व्यक्तिको आत्मविश्वास बढाउँछ ।",
+"error_type": "NO_ERROR",
+"edit": {
+"operation": "NONE",
+"incorrect_span": "",
+"correct_span": ""
+}
+},
+{
+  "incorrect_sentence": "स्थानीय बजारमा आज सुन र चाँदी दुवैको मूल्यमा भारी वृद्धि भएको हुन्।",
+  "correct_sentence": "स्थानीय बजारमा आज सुन र चाँदी दुवैको मूल्यमा भारी वृद्धि भएको छ।",
+  "error_type": "VERB:AGR",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "हुन्",
+    "correct_span": "छ"
+  }
+},
+{
+  "incorrect_sentence": "हिजो म स्कूल जान्छु ।",
+  "correct_sentence": "हिजो म स्कूल गएँ ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "जान्छु",
+    "correct_span": "गएँ"
+  }
+},
+{
+  "incorrect_sentence": "म अहिले खाना खाएँ ।",
+  "correct_sentence": "म अहिले खाना खान्छु ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "खाएँ",
+    "correct_span": "खान्छु"
+  }
+},
+{
+  "incorrect_sentence": "भोलि म काठमाडौं गएँ ।",
+  "correct_sentence": "भोलि म काठमाडौं जानेछु ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "गएँ",
+    "correct_span": "जानेछु"
+  }
+},
+{
+  "incorrect_sentence": "हजुर आउँछ ।",
+  "correct_sentence": "हजुर आउनुहुन्छ ।",
+  "error_type": "HONORIFIC",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "आउँछ",
+    "correct_span": "आउनुहुन्छ"
+  }
+},
+{
+  "incorrect_sentence": "म खाना खान्छु सके ।",
+  "correct_sentence": "म खाना खान सकेँ ।",
+  "error_type": "STRUCT",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "खान्छु",
+    "correct_span": "खान"
+  }
+},
+{
+  "incorrect_sentence": "उसले भने म जान्छु ।",
+  "correct_sentence": "उसले भन्यो, म जान्छु ।",
+  "error_type": "STRUCT",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "भने",
+    "correct_span": "भन्यो,"
+  }
+},
+{
+  "incorrect_sentence": "भोलि हामी खेल खेल्यौं ।",
+  "correct_sentence": "भोलि हामी खेल खेल्नेछौं ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "खेल्यौं",
+    "correct_span": "खेल्नेछौं"
+  }
+},
+{
+  "incorrect_sentence": "अहिले उनी घर गए ।",
+  "correct_sentence": "अहिले उनी घर जान्छन् ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "गए",
+    "correct_span": "जान्छन्"
+  }
+},
+{
+  "incorrect_sentence": "अहिले म किताब पढेँ ।",
+  "correct_sentence": "अहिले म किताब पढ्छु ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "पढेँ",
+    "correct_span": "पढ्छु"
+  }
+},
+{
+  "incorrect_sentence": "हिजो उनी विद्यालय जान्छन् ।",
+  "correct_sentence": "हिजो उनी विद्यालय गए ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "जान्छन्",
+    "correct_span": "गए"
+  }
+},
+{
+  "incorrect_sentence": "अस्ति हामी घुम्न जान्छौं ।",
+  "correct_sentence": "अस्ति हामी घुम्न गयौं ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "जान्छौं",
+    "correct_span": "गयौं"
+  }
+},
+{
+  "incorrect_sentence": "के म त सहयोग गर्न सक्छु ?",
+  "correct_sentence": "के म सहयोग गर्न सक्छु ?",
+  "error_type": "STRUCT",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "त",
+    "correct_span": ""
+  }
+},
+{
+  "incorrect_sentence": "के म सहयोग गर्न सक्छौ ?",
+  "correct_sentence": "के म सहयोग गर्न सक्छु ?",
+  "error_type": "NOUN:NUM",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "सक्छौ",
+    "correct_span": "सक्छु"
+  }
+},
+{
+  "incorrect_sentence": "नविकरणीय ऊर्जाले वातावरणीय प्रदूषण घटाउँ ।",
+  "correct_sentence": "नविकरणीय ऊर्जाले वातावरणीय प्रदूषण घटाउँछ ।",
+  "error_type": "CASE/POSTP",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "घटाउँ",
+    "correct_span": "घटाउँछ"
+  }
+},
+{
+  "incorrect_sentence": "तिमी धेरै राम्री छन् ।",
+  "correct_sentence": "तिमी धेरै राम्री छौ ।",
+  "error_type": "VERB:AGR",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "छन्",
+    "correct_span": "छौ"
+  }
+},
+{
+  "incorrect_sentence": "तिमी धेरै रामरी छौ ।",
+  "correct_sentence": "तिमी धेरै राम्री छौ ।",
+  "error_type": "ORTH/SPELL",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "रामरी",
+    "correct_span": "राम्री"
+  }
+},
+{
+  "incorrect_sentence": "राज कुमार प्रभाकर एक रोचक र बालबालिकालाई मनोरञ्जन दिन काव्य हो।",
+  "correct_sentence": "राज कुमार प्रभाकर एक रोचक र बालबालिकालाई मनोरञ्जन दिने काव्य हो।",
+  "error_type": "CASE/POSTP",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "दिन",
+    "correct_span": "दिने"
+  }
+},
+{
+  "incorrect_sentence": "राज कुमार प्रभाकर एक रोचक र बालबालिकालाई मनोरञ्जन दिने काव्य हुन्।",
+  "correct_sentence": "राज कुमार प्रभाकर एक रोचक र बालबालिकालाई मनोरञ्जन दिने काव्य हो।",
+  "error_type": "NOUN:NUM",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "हुन",
+    "correct_span": "हो"
+  }
+},
+{
+  "incorrect_sentence": "यो नेपाली पुस्तक र साहित्यहरूको को वेबसाइट हो।",
+  "correct_sentence": "यो नेपाली पुस्तक र साहित्यहरूको वेबसाइट हो।",
+  "error_type": "STRUCT",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "को ",
+    "correct_span": ""
+  }
+},
+{
+  "incorrect_sentence": "सरकारले डेढ वर्षभित्रमा पेट्रोलमा १० प्रतिशत इथानोल मिसाउने नीति कार्यान्वयनमा आउने बताएको छी ।",
+  "correct_sentence": "सरकारले डेढ वर्षभित्रमा पेट्रोलमा १० प्रतिशत इथानोल मिसाउने नीति कार्यान्वयनमा आउने बताएको छ ।",
+  "error_type": "AUX",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "छी",
+    "correct_span": "छ"
+  }
+},
+{
+  "incorrect_sentence": "सरकारले डेढ वर्षभित्रमा पेट्रोलमा १० प्रतिशत इथानोल मिसाउने नीति कार्यान्वयनमा आउनु भएको बताएको छ ।",
+  "correct_sentence": "सरकारले डेढ वर्षभित्रमा पेट्रोलमा १० प्रतिशत इथानोल मिसाउने नीति कार्यान्वयनमा आउने बताएको छ ।",
+  "error_type": "HONORIFIC",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "आउनु भएको",
+    "correct_span": "आउने"
+  }
+},
+{
+  "incorrect_sentence": "यो प्रदर्शन मेरो लागि सानदार रह्यो, किनभने श्रीलंकालाई सय रनभन्दा कमको स्कोरमा समेट्न सक्नु ठूलै उपलब्धि हो ।",
+  "correct_sentence": "यो प्रदर्शन मेरो लागि सानदार रह्यो, किनभने श्रीलंकालाई सय रनभन्दा कमको स्कोरमा समेट्न सक्नु ठूलै उपलब्धि हो ।",
+  "error_type": "NO_ERROR",
+  "edit": {
+    "operation": "NONE",
+    "incorrect_span": "",
+    "correct_span": ""
+  }
+},
+{
+  "incorrect_sentence": "यो प्रदर्शन मेरो लागि सानदार रह्यो, किनभने श्रीलंका मा सय रनभन्दा कमको स्कोरमा समेट्न सक्नु ठूलै उपलब्धि हो ।",
+  "correct_sentence": "यो प्रदर्शन मेरो लागि सानदार रह्यो, किनभने श्रीलंकालाई सय रनभन्दा कमको स्कोरमा समेट्न सक्नु ठूलै उपलब्धि हो ।",
+  "error_type": "CASE/POSTP",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "मा",
+    "correct_span": "लाई"
+  }
+},
+{
+  "incorrect_sentence": "श्रीलंकामा लागि कप्तान दासुन सनाकाले सर्वाधिक ३० रन बनाए ।",
+  "correct_sentence": "श्रीलंकाका लागि कप्तान दासुन सनाकाले सर्वाधिक ३० रन बनाए ।",
+  "error_type": "CASE/POSTP",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "मा",
+    "correct_span": "का"
+  }
+},
+{
+  "incorrect_sentence": "नेपालको दक्षिणमा तराईको उर्वर समतल क्षेत्र, उत्तरमा पहाड र हिमाल रहेका छ।",
+  "correct_sentence": "नेपालको दक्षिणमा तराईको उर्वर समतल क्षेत्र, उत्तरमा पहाड र हिमाल रहेको छ।",
+  "error_type": "VERB:AGR",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "रहेका छ",
+    "correct_span": "रहेको छ"
+  }
+},
+{
+  "incorrect_sentence": "नेपाल बहुदलीय भएको व्यवस्था संसदीय गणतन्त्र हो।",
+  "correct_sentence": "नेपाल बहुदलीय व्यवस्था भएको संसदीय गणतन्त्र हो।",
+  "error_type": "STRUCT",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "बहुदलीय भएको व्यवस्था",
+    "correct_span": "बहुदलीय व्यवस्था भएको"
+  }
+},
+{
+  "incorrect_sentence": "नेपालको संविधानका देशको सर्वोच्च कानून हो।",
+  "correct_sentence": "नेपालको संविधान देशको सर्वोच्च कानून हो।",
+  "error_type": "CASE/POSTP",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "संविधानका",
+    "correct_span": "संविधान"
+  }
+},
+{
+  "incorrect_sentence": "नेपाल प्रहरी कानुन कार्यन्वयन गर्ने प्राथमिक निकाय हो।",
+  "correct_sentence": "नेपाल प्रहरी कानुन कार्यान्वयन गर्ने प्राथमिक निकाय हो।",
+  "error_type": "ORTH/SPELL",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "कार्यन्वयन",
+    "correct_span": "कार्यान्वयन"
+  }
+},
+  {
+    "incorrect_sentence": "तिनीहरू हिजो बजार गएको छ।",
+    "correct_sentence": "तिनीहरू हिजो बजार गएका छन्।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "गएको छ",
+      "correct_span": "गएका छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "म भोलि काठमाडौं जान्छु थियो।",
+    "correct_sentence": "म भोलि काठमाडौं जानेछु।",
+    "error_type": "VERB:TENSE",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जान्छु थियो",
+      "correct_span": "जानेछु"
+    }
+  },
+  {
+    "incorrect_sentence": "उहाँले मलाई एउटा कलम दियो।",
+    "correct_sentence": "उहाँले मलाई एउटा कलम दिनुभयो।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "दियो",
+      "correct_span": "दिनुभयो"
+    }
+  },
+  {
+    "incorrect_sentence": "राम घरमा देखि आयो।",
+    "correct_sentence": "राम घरदेखि आयो।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "घरमा देखि",
+      "correct_span": "घरदेखि"
+    }
+  },
+  {
+    "incorrect_sentence": "म गृहकार्य गर्दै छु छ।",
+    "correct_sentence": "म गृहकार्य गर्दै छु।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छु छ",
+      "correct_span": "छु"
+    }
+  },
+  {
+    "incorrect_sentence": "हामीले भात खायौं।",
+    "correct_sentence": "हामीले भात खायौं।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "नेपाल राष्ट्रिय रक्षाका लागि कुटनीतिमा निर्भर छ।",
+    "correct_sentence": "नेपाल राष्ट्रिय रक्षाका लागि कूटनीतिमा निर्भर छ।",
+    "error_type": "ORTH/SPELL",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "कुटनीतिमा",
+      "correct_span": "कूटनीतिमा"
+    }
+  },
+{
+    "incorrect_sentence": "पर्यटन नेपालको सबैभन्दा ठुलो र द्रुत बृद्धि हुने उद्योग हो छ ।",
+    "correct_sentence": "पर्यटन नेपालको सबैभन्दा ठुलो र द्रुत बृद्धि हुने उद्योग हो ।",
+    "error_type": "AUX",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छ",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा बेरोजगारी र कम बेरोजगारीको दर जनसङ्ख्याको आधा भन्दा काम गर्ने उमेरको बढी छ ।",
+    "correct_sentence": "नेपालमा बेरोजगारी र कम बेरोजगारीको दर काम गर्ने उमेरको जनसङ्ख्याको आधा भन्दा बढी छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "जनसङ्ख्याको आधा भन्दा काम गर्ने उमेरको",
+      "correct_span": "काम गर्ने उमेरको जनसङ्ख्याको आधा भन्दा"
+    }
+  },
+  {
+    "incorrect_sentence": "लाखौँलाई रोजगारी खोज्न विदेशमा, मुख्यतया भारत, खाडी र पूर्वी एसियामा।",
+    "correct_sentence": "लाखौँलाई रोजगारी खोज्न विदेशमा, मुख्यतया भारत, खाडी र पूर्वी एसियामा जान्छन्।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "",
+      "correct_span": "जान्छन्"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपाल बहुसांस्कृतिक र बहुजातिय देश हुन्।",
+    "correct_sentence": "नेपाल बहुसांस्कृतिक र बहुजातिय देश हो।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपाली भाषा देवनागरी लिपिमा लेखिएका छन्।",
+    "correct_sentence": "नेपाली भाषा देवनागरी लिपिमा लेखिएको छ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "लेखिएका छन्",
+      "correct_span": "लेखिएको छ"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा हिन्दुहरू विश्वमा भारत पछि सबैभन्दा धेरै छन्।",
+    "correct_sentence": "नेपालमा हिन्दुहरू विश्वमा भारत पछि सबैभन्दा धेरै छन्।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+    "incorrect_sentence": "नेपालमा हिन्दुहरूलाई विश्वमा भारत पछि सबैभन्दा धेरै छन्।",
+    "correct_sentence": "नेपालमा हिन्दुहरू विश्वमा भारत पछि सबैभन्दा धेरै छन्।",
+    "error_type": "CASE/POSTP",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हिन्दुहरूलाई",
+      "correct_span": "हिन्दुहरू"
+    }
+  },
+  {
+    "incorrect_sentence": "नेपाल राष्ट्रिय रक्षाका लागि कूटनीतिमा निर्भर छौ।",
+    "correct_sentence": "नेपाल राष्ट्रिय रक्षाका लागि कूटनीतिमा निर्भर छ।",
+    "error_type": "VERB:AGR",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "छौ",
+      "correct_span": "छ"
+    }
+  },
+
+  {
+    "incorrect_sentence": "पर्यटन नेपालका सबैभन्दा ठुला र द्रुत बृद्धि हुने उद्योग हुन्।",
+    "correct_sentence": "पर्यटन नेपालको सबैभन्दा ठुलो र द्रुत बृद्धि हुने उद्योग हो।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुन्",
+      "correct_span": "हो"
+    }
+  },
+{
+    "incorrect_sentence": "नेपाल बहुसांस्कृतिक र बहुजातिय देश हुनुहुन्छ।",
+    "correct_sentence": "नेपाल बहुसांस्कृतिक र बहुजातिय देश हो।",
+    "error_type": "HONORIFIC",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "हुनुहुन्छ",
+      "correct_span": "हो"
+    }
+  },
+  {
+    "incorrect_sentence": "एक दर्जन यात्रु सिट भएको माइक्रोले दुई दर्जन यात्रुहरू कोच्नु सामान्य मानिन्छ।",
+    "correct_sentence": "एक दर्जन यात्रु सिट भएको माइक्रोले दुई दर्जन यात्रु कोच्नु सामान्य मानिन्छ।",
+    "error_type": "NOUN:NUM",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "यात्रुहरू",
+      "correct_span": "यात्रु"
+    }
+  },
+    {
+    "incorrect_sentence": "यो वर्षौंदेखिको परम्पराले सबैखाले व्यवस्थामा व्यवस्थामा निरन्तरता पाउँदै आएको छ ।",
+    "correct_sentence": "यो वर्षौंदेखिको परम्पराले सबैखाले व्यवस्थामा निरन्तरता पाउँदै आएको छ ।",
+    "error_type": "STRUCT",
+    "edit": {
+      "operation": "REPLACE",
+      "incorrect_span": "व्यवस्थामा व्यवस्थामा",
+      "correct_span": "व्यवस्थामा"
+    }
+  },
+    {
+    "incorrect_sentence": "समय बलवान छ।",
+    "correct_sentence": "समय बलवान छ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+  "incorrect_sentence": "म खाना खाँदैछ ।",
+  "correct_sentence": "म खाना खाँदैछु ।",
+  "error_type": "AUX",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "छ",
+    "correct_span": "छु"
+  }
+},
+{
+  "incorrect_sentence": "उनी पढ्दैछु ।",
+  "correct_sentence": "उनी पढ्दैछिन् ।",
+  "error_type": "AUX",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "छु",
+    "correct_span": "छिन्"
+  }
+},
+{
+  "incorrect_sentence": "हामी खेल्दैछ ।",
+  "correct_sentence": "हामी खेल्दैछौं ।",
+  "error_type": "AUX",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "छ",
+    "correct_span": "छौं"
+  }
+},
+{
+  "incorrect_sentence": "उहाँ बोल्दैछ ।",
+  "correct_sentence": "उहाँ बोल्दै हुनुहुन्छ ।",
+  "error_type": "AUX",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "बोल्दैछ",
+    "correct_span": "बोल्दै हुनुहुन्छ"
+  }
+},
+{
+  "incorrect_sentence": "तीन जना विद्यार्थी आयो ।",
+  "correct_sentence": "तीन जना विद्यार्थी आए ।",
+  "error_type": "NOUN:NUM",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "आयो",
+    "correct_span": "आए"
+  }
+},
+{
+  "incorrect_sentence": "धेरै मानिस आयो ।",
+  "correct_sentence": "धेरै मानिस आए ।",
+  "error_type": "NOUN:NUM",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "आयो",
+    "correct_span": "आए"
+  }
+},
+{
+  "incorrect_sentence": "हजुर कहाँ जान्छौ ?",
+  "correct_sentence": "हजुर कहाँ जानुहुन्छ ?",
+  "error_type": "HONORIFIC",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "जान्छौ",
+    "correct_span": "जानुहुन्छ"
+  }
+},
+{
+  "incorrect_sentence": "भोलि उनी विद्यालय गए ।",
+  "correct_sentence": "भोलि उनी विद्यालय जानेछन् ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "गए",
+    "correct_span": "जानेछन्"
+  }
+},
+  {
+    "incorrect_sentence": "हाल नेपालमा पश्चिमी न्यूनचापीय प्रणालीको सामान्य प्रभाव रहेको छ।",
+    "correct_sentence": "हाल नेपालमा पश्चिमी न्यूनचापीय प्रणालीको सामान्य प्रभाव रहेको छ।",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+    {
+    "incorrect_sentence": "नगर नै नगरले भरिएको उपत्यकाका आम जनताको हालत कस्तो छ त ?",
+    "correct_sentence": "नगर नै नगरले भरिएको उपत्यकाका आम जनताको हालत कस्तो छ त ?",
+    "error_type": "NO_ERROR",
+    "edit": {
+      "operation": "NONE",
+      "incorrect_span": "",
+      "correct_span": ""
+    }
+  },
+  {
+  "incorrect_sentence": "तँ अहिले के गर्दैछ ?",
+  "correct_sentence": "तँ अहिले के गर्दैछस् ?",
+  "error_type": "AUX",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "छ",
+    "correct_span": "छस्"
+  }
+},
+{
+  "incorrect_sentence": "तँ कहाँ जाँदैछु ?",
+  "correct_sentence": "तँ कहाँ जाँदैछस् ?",
+  "error_type": "AUX",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "छु",
+    "correct_span": "छस्"
+  }
+},
+{
+  "incorrect_sentence": "तँ स्कूल जानुहुन्छ ।",
+  "correct_sentence": "तँ स्कूल जान्छस् ।",
+  "error_type": "HONORIFIC",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "जानुहुन्छ",
+    "correct_span": "जान्छस्"
+  }
+},
+{
+  "incorrect_sentence": "तँ किताब पढ्नुहुन्छ ।",
+  "correct_sentence": "तँ किताब पढ्छस् ।",
+  "error_type": "HONORIFIC",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "पढ्नुहुन्छ",
+    "correct_span": "पढ्छस्"
+  }
+},
+{
+  "incorrect_sentence": "तँ दुई वटा किताब किन्छस् ।",
+  "correct_sentence": "तँ दुई वटा किताब किन्छस् ।",
+  "error_type": "NO_ERROR",
+  "edit": {
+    "operation": "NONE",
+    "incorrect_span": "",
+    "correct_span": ""
+  }
+},
+{
+  "incorrect_sentence": "तँ अहिले घर जान्छस् ।",
+  "correct_sentence": "तँ अहिले घर जान्छस् ।",
+  "error_type": "NO_ERROR",
+  "edit": {
+    "operation": "NONE",
+    "incorrect_span": "",
+    "correct_span": ""
+  }
+},
+{
+  "incorrect_sentence": "तँ स्कूल जान्छस् बिहान ।",
+  "correct_sentence": "तँ बिहान स्कूल जान्छस् ।",
+  "error_type": "STRUCT",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "स्कूल जान्छस् बिहान",
+    "correct_span": "बिहान स्कूल जान्छस्"
+  }
+},
+{
+  "incorrect_sentence": "तँ खाना खान्छु ।",
+  "correct_sentence": "तँ खाना खान्छस् ।",
+  "error_type": "VERB:AGR",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "खान्छु",
+    "correct_span": "खान्छस्"
+  }
+},
+{
+  "incorrect_sentence": "तँ खेल खेल्छु ।",
+  "correct_sentence": "तँ खेल खेल्छस् ।",
+  "error_type": "VERB:AGR",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "खेल्छु",
+    "correct_span": "खेल्छस्"
+  }
+},
+{
+  "incorrect_sentence": "हिजो तँ स्कूल जान्छस् ।",
+  "correct_sentence": "हिजो तँ स्कूल गइस् ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "जान्छस्",
+    "correct_span": "गइस्"
+  }
+},
+{
+  "incorrect_sentence": "भोलि तँ स्कूल गयौ ।",
+  "correct_sentence": "भोलि तँ स्कूल जानेछस् ।",
+  "error_type": "VERB:TENSE",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "गयौ",
+    "correct_span": "जानेछस्"
+  }
+},
+{
+  "incorrect_sentence": "तँ मलाई खेल्छस् ।",
+  "correct_sentence": "तँ मसँग खेल्छस् ।",
+  "error_type": "CASE/POSTP",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "मलाई",
+    "correct_span": "मसँग"
+  }
+},
+{
+  "incorrect_sentence": "तैंले खाना खानुहुन्छ ।",
+  "correct_sentence": "तैंले खाना खान्छस् ।",
+  "error_type": "HONORIFIC",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "खानुहुन्छ",
+    "correct_span": "खान्छस्"
+  }
+},
+{
+  "incorrect_sentence": "तेरो दुई वटा साथी आयो ।",
+  "correct_sentence": "तेरो दुई वटा साथी आए ।",
+  "error_type": "NOUN:NUM",
+  "edit": {
+    "operation": "REPLACE",
+    "incorrect_span": "आयो",
+    "correct_span": "आए"
+  }
+}
+
+]

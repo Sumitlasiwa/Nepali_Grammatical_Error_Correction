@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vyakaranly</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=DM+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f4f2;
+  --surface: #ffffff;
+  --surface2: #f0eeeb;
+  --border: #d8d4ce;
+  --border-light: #bfbab3;
+  --ink: #1a1a1a;
+  --ink-dim: #4a4540;
+  --ink-faint: #9a948e;
+  --red: #e03131;
+  --red-glow: rgba(224,49,49,0.15);
+  --gold: #c9a84c;
+  --mono: 'DM Mono', monospace;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --display: 'Playfair Display', Georgia, serif;
+  --pad-x: 52px;
+  --pad-y: 40px;
+  --font-size: 1.12rem;
+  --line-height: 2.0;
+}
+
+body {
+  font-family: var(--serif);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 80px;
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+
+/* ── Topbar ── */
+.topbar {
+  width: 100%; border-bottom: 1px solid var(--border);
+  padding: 0 48px; display: flex; align-items: center;
+  justify-content: space-between; height: 52px;
+  background: var(--surface); position: sticky; top: 0; z-index: 100;
+}
+.brand { display: flex; align-items: baseline; gap: 10px; }
+.brand-name { font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+.brand-tag {
+  font-family: var(--mono); font-size: 0.62rem; color: var(--gold);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid var(--gold); padding: 2px 6px; border-radius: 2px; opacity: 0.8;
+}
+.topbar-right { display: flex; align-items: center; gap: 20px; }
+.meta-info { font-family: var(--mono); font-size: 0.65rem; color: var(--ink-faint); display: flex; gap: 14px; }
+.status-pill {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 0.68rem; color: var(--ink-dim);
+  background: var(--surface2); border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 20px;
+}
+.dot { width:5px; height:5px; border-radius:50%; background:var(--ink-faint); transition: background .3s, box-shadow .3s; }
+.dot.busy { background:var(--gold); box-shadow:0 0 6px var(--gold); animation:pulse 1s infinite; }
+.dot.ok   { background:#4caf72; box-shadow:0 0 6px rgba(76,175,114,.5); }
+.dot.err  { background:var(--red); box-shadow:0 0 6px rgba(224,49,49,.5); }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+/* ── Page ── */
+.page { width: 100%; max-width: 900px; padding: 48px 48px 0; }
+
+.doc-header {
+  margin-bottom: 32px; padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.doc-title { font-family: var(--mono); font-size: 0.65rem; color: var(--ink-faint); letter-spacing: 0.12em; text-transform: uppercase; }
+.hint-row { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.62rem; color: var(--ink-faint); }
+.hint-badge { background: var(--surface2); border: 1px solid var(--border); color: var(--ink-dim); padding: 2px 7px; border-radius: 3px; }
+
+/* ── Editor shell — overflow visible so popup escapes ── */
+.editor-shell {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--border), 0 24px 48px rgba(0,0,0,.08);
+}
+.editor-shell:focus-within { box-shadow: 0 0 0 1px var(--border-light), 0 24px 64px rgba(0,0,0,.5); }
+
+.editor-toolbar {
+  padding: 10px 20px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 6px; background: var(--surface2);
+  border-radius: 8px 8px 0 0;
+}
+.tb-dots { display: flex; gap: 5px; margin-right: 8px; }
+.tb-dots span { width:10px; height:10px; border-radius:50%; display:block; }
+.tb-dots .r{background:#ff5f57} .tb-dots .y{background:#febc2e} .tb-dots .g{background:#28c840}
+.tb-label { font-family: var(--mono); font-size: 0.65rem; color: var(--ink-faint); margin-left: 4px; }
+.tb-sep { width:1px; height:12px; background:var(--border); margin:0 8px; }
+.tb-badge {
+  font-family: var(--mono); font-size: 0.6rem; color: var(--gold);
+  border: 1px solid rgba(201,168,76,.3); background: rgba(201,168,76,.06);
+  padding: 2px 7px; border-radius: 3px;
+}
+
+/* ── Editor wrapper ── */
+.editor-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 460px;
+  background: var(--surface);
+}
+
+/* Overlay sits ON TOP, pointer-events none except on err-mark spans */
+#overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 3;
+  padding: var(--pad-y) var(--pad-x);
+  font-family: var(--serif);
+  font-size: var(--font-size);
+  font-weight: 300;
+  line-height: var(--line-height);
+  color: transparent;
+  background: transparent;
+  border: none;
+  outline: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: visible;
+  pointer-events: none;
+  word-break: break-word;
+}
+
+/* The actual textarea */
+#editor {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  min-height: 460px;
+  padding: var(--pad-y) var(--pad-x);
+  font-family: var(--serif);
+  font-size: var(--font-size);
+  font-weight: 300;
+  line-height: var(--line-height);
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  caret-color: var(--gold);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: visible;
+  word-break: break-word;
+}
+#editor::placeholder { color: var(--ink-faint); font-style: italic; }
+
+/* Wavy underline marks inside overlay */
+.err-mark {
+  border-bottom: 2.5px wavy var(--red);
+  background: var(--red-glow);
+  cursor: pointer;
+  pointer-events: all;
+  color: transparent;
+  border-radius: 1px;
+}
+.err-mark:hover, .err-mark.active { background: rgba(224,49,49,0.28); }
+
+/* Green underline for sentences with no error — just reviewed */
+.ok-mark {
+  border-bottom: 2.5px wavy #4caf72;
+  background: rgba(76,175,114,0.08);
+  cursor: pointer;
+  pointer-events: all;
+  color: transparent;
+  border-radius: 1px;
+}
+.ok-mark:hover, .ok-mark.active { background: rgba(76,175,114,0.18); }
+
+.editor-footer {
+  padding: 10px 20px; border-top: 1px solid var(--border);
+  background: var(--surface2); display: flex; align-items: center; justify-content: space-between;
+  border-radius: 0 0 8px 8px;
+}
+.ef-label { font-family: var(--mono); font-size: 0.63rem; color: var(--ink-faint); display: flex; align-items: center; gap: 8px; }
+.ef-actions { display: flex; gap: 8px; }
+.ef-btn {
+  font-family: var(--mono); font-size: 0.62rem;
+  padding: 3px 10px; border-radius: 4px; cursor: pointer;
+  border: 1px solid var(--border-light);
+  background: var(--surface); color: var(--ink-dim);
+  transition: background .15s, color .15s;
+}
+.ef-btn:hover { background: var(--border); color: var(--ink); }
+.ef-btn.accept { border-color: rgba(76,175,114,.4); color: #4caf72; }
+.ef-btn.accept:hover { background: rgba(76,175,114,.12); }
+.ef-btn.ignore { border-color: rgba(224,49,49,.3); color: #e03131; }
+.ef-btn.ignore:hover { background: rgba(224,49,49,.1); }
+.ef-legend { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); }
+.legend-wavy { width:18px; height:2px; border-bottom: 2.5px wavy var(--red); display:inline-block; }
+
+/* ── Model selector ── */
+.model-select {
+  font-family: var(--mono); font-size: 0.6rem;
+  background: var(--surface); color: var(--gold);
+  border: 1px solid rgba(201,168,76,.35); border-radius: 3px;
+  padding: 2px 20px 2px 7px; cursor: pointer;
+  appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath fill='%23c9a84c' d='M0 0l4 5 4-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 6px center;
+  transition: border-color .15s, background-color .15s;
+}
+.model-select:hover { border-color: var(--gold); background-color: rgba(201,168,76,.08); }
+.model-select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 2px rgba(201,168,76,.15); }
+.model-select option { background: var(--surface2); color: var(--ink); }
+
+/* ── Popup — position:fixed so it escapes all overflow clipping ── */
+#popup {
+  position: fixed;
+  background: var(--surface);
+  border: 1px solid var(--border-light); border-radius: 10px;
+  box-shadow: 0 0 0 1px var(--border), 0 20px 60px rgba(0,0,0,.15);
+  width: 440px; z-index: 9999; display: none; overflow: hidden;
+  animation: popIn .15s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes popIn { from{opacity:0;transform:translateY(6px) scale(.96)} to{opacity:1;transform:none} }
+
+.popup-header {
+  padding: 12px 16px 10px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--surface2);
+}
+.popup-title {
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 500;
+  color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px;
+}
+.popup-title::before { content:''; width:4px; height:4px; border-radius:50%; background:var(--gold); display:inline-block; }
+.pclose {
+  background:none; border:none; cursor:pointer; color:var(--ink-faint);
+  width:22px; height:22px; display:flex; align-items:center; justify-content:center;
+  border-radius:4px; transition: background .15s, color .15s; font-size:.9rem;
+}
+.pclose:hover { background:var(--border); color:var(--ink); }
+
+.popup-source {
+  padding: 10px 16px 6px; font-family: var(--mono); font-size: 0.63rem;
+  color: var(--ink-faint); display: flex; align-items: baseline; gap: 6px;
+}
+.popup-source-label { flex-shrink:0; }
+.popup-source-text { color:var(--ink-dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-style:italic; }
+
+.clist { padding: 6px 0; }
+.citem {
+  display:flex; align-items:center; padding:9px 16px; cursor:pointer; gap:12px;
+  transition:background .1s; border-left:2px solid transparent;
+}
+.citem:hover, .citem.sel { background:var(--surface2); border-left-color:var(--gold); }
+.crank { font-family:var(--mono); font-size:.6rem; color:var(--ink-faint); min-width:16px; text-align:center; }
+.citem:first-child .crank { color:var(--gold); font-weight:500; }
+.ctext { flex:1; font-family:var(--serif); font-size:.95rem; color:var(--ink-dim); line-height:1.5; font-weight:300; }
+.citem.sel .ctext { color:var(--ink); }
+.cscore {
+  font-family:var(--mono); font-size:.58rem; color:var(--ink-faint);
+  background:var(--surface2); padding:2px 6px; border-radius:3px; border:1px solid var(--border);
+}
+
+.keep {
+  padding:9px 16px; font-family:var(--mono); font-size:.63rem; color:var(--ink-faint);
+  cursor:pointer; border-top:1px solid var(--border); display:flex; align-items:center;
+  gap:8px; background:var(--surface2); transition:background .1s, color .1s;
+}
+.keep::before { content:'↩'; font-size:.7rem; }
+.keep:hover { color:var(--ink-dim); background:var(--border); }
+
+.pfooter {
+  padding:8px 16px; border-top:1px solid var(--border);
+  font-family:var(--mono); font-size:.58rem; color:var(--ink-faint);
+  display:flex; gap:14px; background:var(--surface2);
+}
+.pfooter kbd {
+  background:var(--border); color:var(--ink-dim); padding:1px 5px;
+  border-radius:3px; font-family:var(--mono); font-size:.58rem; border:1px solid var(--border-light);
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="brand-name">Vyakaranly</span>
+    <span class="brand-tag">AI Grammar</span>
+  </div>
+  <div class="topbar-right">
+    <div class="meta-info">
+      <span id="wc">0 words</span>
+      <span id="cc">0 chars</span>
+    </div>
+    <div class="status-pill">
+      <div class="dot" id="dot"></div>
+      <span id="stxt">ready</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div class="doc-title">नेपाली व्याकरण सम्पादक &nbsp;/&nbsp; Nepali Grammar Editor</div>
+    <div class="hint-row">
+      <span>Pause typing to check grammar</span>
+    </div>
+  </div>
+
+  <div class="editor-shell">
+    <div class="editor-toolbar">
+      <div class="tb-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+      <span class="tb-label">document.nep</span>
+      <div class="tb-sep"></div>
+      <span class="tb-badge">✦ AI Correction Active</span>
+    </div>
+
+    <div class="editor-wrap">
+      <textarea id="editor"
+        placeholder="नेपालीमा टाइप गर्नुहोस्… वाक्य सकिएपछि । थिच्नुहोस् — गल्ती भएमा रातो लहरिलो रेखा देखिनेछ।"
+        spellcheck="false"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+      ></textarea>
+      <div id="overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="editor-footer">
+      <div class="ef-label">
+        <span>Choose GEC model</span>
+        <select class="model-select" id="modelSelect" title="Choose model pair">
+          <option value="mt5">MT5-base</option>
+          <option value="mbart">mBART-50</option>
+          <option value="mbart">nllb-200</option>
+        </select>
+      </div>
+      <div class="ef-actions">
+        <button class="ef-btn accept" id="btn-correct-all">✓ Correct all</button>
+        <button class="ef-btn ignore" id="btn-ignore-all">✕ Ignore all</button>
+      </div>
+      <div class="ef-legend">
+        <span class="legend-wavy"></span>
+        <span>error</span>
+        <span class="legend-wavy" style="border-color:#4caf72; margin-left:8px;"></span>
+        <span>reviewed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup lives at body level so position:fixed works without any clipping -->
+<div id="popup">
+  <div class="popup-header">
+    <div class="popup-title">Grammar Suggestions</div>
+    <button class="pclose" id="pclose">✕</button>
+  </div>
+  <div class="popup-source">
+    <span class="popup-source-label">original:</span>
+    <span class="popup-source-text" id="plabel"></span>
+  </div>
+  <div class="clist" id="clist"></div>
+  <div class="keep" id="keep">Keep original &amp; dismiss</div>
+  <div class="pfooter">
+    <span><kbd>↑↓</kbd> navigate</span>
+    <span><kbd>Enter</kbd> apply</span>
+    <span><kbd>Esc</kbd> dismiss</span>
+  </div>
+</div>
+
+<script>
+const editor  = document.getElementById('editor');
+const overlay = document.getElementById('overlay');
+const popup   = document.getElementById('popup');
+const clist   = document.getElementById('clist');
+const plabel  = document.getElementById('plabel');
+const dot     = document.getElementById('dot');
+const stxt    = document.getElementById('stxt');
+const modelSelect = document.getElementById('modelSelect');
+const API     = 'http://127.0.0.1:8000/correct';
+/*const API   = 'https://investigation-occasional-join-months.trycloudflare.com/correct';*/
+
+let selIdx = 0, activeCandidates = [], activeError = null;
+let debounceTimer = null;
+
+let errors = [];
+let errorIdCounter = 0;
+const inFlight = new Set();
+
+/* ── Status ── */
+function setStatus(cls, msg){ dot.className='dot '+cls; stxt.textContent=msg; }
+
+/* ── Word/char count ── */
+function updateCount(){
+  const t = editor.value;
+  document.getElementById('wc').textContent = t.trim() ? t.trim().split(/\s+/).length+' words':'0 words';
+  document.getElementById('cc').textContent = t.length+' chars';
+}
+
+/* ── Auto-size textarea and sync overlay ── */
+function autoSize(){
+  const scrollY = window.scrollY;
+  editor.style.height = 'auto';
+  const h = Math.max(460, editor.scrollHeight);
+  editor.style.height = h + 'px';
+  overlay.style.height = h + 'px';
+  window.scrollTo({ top: scrollY, behavior: 'instant' });
+}
+
+const ro = new ResizeObserver(() => {
+  overlay.style.width  = editor.offsetWidth  + 'px';
+  overlay.style.height = editor.offsetHeight + 'px';
+});
+ro.observe(editor);
+
+/* ── Normalize danda ── */
+function normalizeDanda(){
+  const val = editor.value;
+  const pos  = editor.selectionStart;
+  if(val[pos-1] !== '।') return;
+  const before   = val.slice(0, pos - 1);
+  const stripped = before.replace(/\s+$/, '');
+  const after    = val.slice(pos);
+  const needsSpace = after.length > 0 && !/^\s/.test(after);
+  const trailingSpace = needsSpace ? ' ' : '';
+  const newVal = stripped + '।' + trailingSpace + after;
+  if(newVal !== val){
+    const newPos = stripped.length + 1 + trailingSpace.length;
+    editor.value = newVal;
+    editor.selectionStart = editor.selectionEnd = newPos;
+  }
+}
+
+/* ── Prune stale errors ── */
+function pruneErrors(){
+  const text = editor.value;
+  errors = errors.filter(err => {
+    const sliceAtPos = text.slice(err.start, err.end);
+    if(sliceAtPos.trim() === err.sentence.trim()) return true;
+    const idx = text.indexOf(err.sentence);
+    if(idx === -1) return false;
+    const charAfter = text[idx + err.sentence.length];
+    if(charAfter !== undefined && !/[\s।?!\n]/.test(charAfter)) return false;
+    err.start = idx;
+    err.end   = idx + err.sentence.length;
+    return true;
+  });
+  if(activeError && !errors.find(e => e.id === activeError.id)) closePopup();
+}
+
+/* ── Word-level diff ── */
+function diffWords(source, target){
+  const srcTok = source.split(/(\s+)/);
+  const tgtTok = target.split(/(\s+)/);
+  const R = srcTok.length, C = tgtTok.length;
+  const dp = Array.from({length: R+1}, () => new Array(C+1).fill(0));
+  for(let i = R-1; i >= 0; i--)
+    for(let j = C-1; j >= 0; j--)
+      dp[i][j] = srcTok[i] === tgtTok[j] ? dp[i+1][j+1]+1 : Math.max(dp[i+1][j], dp[i][j+1]);
+  const result = [];
+  let i = 0, j = 0;
+  while(i < R && j < C){
+    if(srcTok[i] === tgtTok[j]){ result.push({text:srcTok[i],changed:false}); i++; j++; }
+    else if(dp[i+1][j] >= dp[i][j+1]){ result.push({text:srcTok[i],changed:true}); i++; }
+    else { j++; }
+  }
+  while(i < R){ result.push({text:srcTok[i],changed:true}); i++; }
+  return result;
+}
+
+/* ── Build sentence HTML ── */
+function buildSentenceHtml(err, rawText){
+  if(!err.hasError) return `<span class="ok-mark" data-id="${err.id}">${escHtml(rawText)}</span>`;
+  const best = err.candidates?.[0]?.sentence?.trim();
+  if(!best) return `<span class="err-mark" data-id="${err.id}">${escHtml(rawText)}</span>`;
+  const tokens = diffWords(rawText.trim(), best);
+  let inner = '';
+  for(const tok of tokens){
+    if(tok.changed && tok.text.trim()) inner += `<span class="err-mark" data-id="${err.id}">${escHtml(tok.text)}</span>`;
+    else inner += escHtml(tok.text);
+  }
+  return inner;
+}
+
+/* ── Render overlay ── */
+function renderOverlay(){
+  const text = editor.value;
+  if(!errors.length){ overlay.textContent = text; return; }
+  let html = '', cursor = 0;
+  const sorted = [...errors].sort((a,b) => a.start - b.start);
+  for(const err of sorted){
+    if(err.start > cursor) html += escHtml(text.slice(cursor, err.start));
+    html += buildSentenceHtml(err, text.slice(err.start, err.end));
+    cursor = err.end;
+  }
+  if(cursor < text.length) html += escHtml(text.slice(cursor));
+  overlay.innerHTML = html;
+  overlay.querySelectorAll('.err-mark, .ok-mark').forEach(mark => {
+    mark.addEventListener('click', e => {
+      e.stopPropagation();
+      const err = errors.find(x => x.id === parseInt(mark.dataset.id, 10));
+      if(err) openPopup(mark, err);
+    });
+  });
+}
+
+function escHtml(t){ return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ── Input handlers ── */
+editor.addEventListener('input', () => {
+  requestAnimationFrame(() => { normalizeDanda(); updateCount(); autoSize(); pruneErrors(); renderOverlay(); triggerCheck(); });
+});
+editor.addEventListener('keyup', (e) => {
+  if(['Backspace','Delete','Cut'].includes(e.key) || (e.ctrlKey && e.key==='x')){ pruneErrors(); renderOverlay(); }
+});
+editor.addEventListener('paste', () => {
+  requestAnimationFrame(() => { pruneErrors(); renderOverlay(); });
+});
+
+/* ── Sentence splitter ── */
+const SENT_END = /[।?!]/;
+function extractSentences(text){
+  const results = []; let segStart = 0;
+  for(let i = 0; i < text.length; i++){
+    if(SENT_END.test(text[i])){
+      const raw = text.slice(segStart, i+1), trimmed = raw.trim();
+      if(trimmed.length > 1){
+        const wsOffset = raw.length - raw.trimStart().length;
+        results.push({ sentence: trimmed, start: segStart+wsOffset, end: i+1 });
+      }
+      segStart = i+1;
+    }
+  }
+  const trailing = text.slice(segStart).trim();
+  if(trailing.length > 1){
+    const wsOffset = text.slice(segStart).length - text.slice(segStart).trimStart().length;
+    results.push({ sentence: trailing, start: segStart+wsOffset, end: text.length });
+  }
+  return results;
+}
+
+/* ── Debounced trigger ── */
+function triggerCheck(){
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    const sentences = extractSentences(editor.value);
+    for(const s of sentences){
+      if(errors.some(e => e.sentence === s.sentence)) continue;
+      if(inFlight.has(s.sentence)) continue;
+      inFlight.add(s.sentence);
+      fetchAndCheck(s.sentence, s.start, s.end);
+    }
+  }, 800);
+}
+
+/* ── API ── */
+async function fetchAndCheck(sentence, origStart, origEnd){
+  setStatus('busy','checking…');
+  try{
+    const res = await fetch(API, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({text: sentence, model: modelSelect.value})
+    });
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data = await res.json();
+    const result = data.results?.[0];
+    inFlight.delete(sentence);
+    if(!result?.all_candidates?.length){ setStatus('ok','no issues'); return; }
+    const currentText = editor.value;
+    const sliceAtPos  = currentText.slice(origStart, origEnd);
+    if(sliceAtPos.trim() !== sentence.trim()){
+      const idx = currentText.indexOf(sentence);
+      if(idx === -1){ setStatus('ok','no issues'); return; }
+      origStart = idx; origEnd = idx + sentence.length;
+    }
+    const best = result.all_candidates[0].sentence.trim();
+    const hasError = best !== sentence.trim();
+    const id = ++errorIdCounter;
+    errors.push({ id, sentence, start: origStart, end: origEnd, candidates: result.all_candidates, hasError });
+    renderOverlay();
+    setStatus('ok', hasError ? 'issue found — click red text' : 'checked — click underline to review');
+  } catch(err){
+    inFlight.delete(sentence);
+    setStatus('err', err.message.includes('fetch') ? 'cannot reach server' : err.message);
+  }
+}
+
+/* ── Popup — position:fixed, viewport-relative coords, flips up when near bottom ── */
+function openPopup(mark, err){
+  activeError = err;
+  activeCandidates = err.candidates;
+  selIdx = 0;
+
+  overlay.querySelectorAll('.err-mark, .ok-mark').forEach(m => m.classList.remove('active'));
+  mark.classList.add('active');
+
+  document.querySelector('.popup-title').textContent = err.hasError
+    ? '⚠ Grammar Suggestions'
+    : '✓ Looks correct — alternatives below';
+
+  plabel.textContent = err.sentence.length > 58 ? err.sentence.slice(0,58)+'…' : err.sentence;
+  renderCandidates(err.candidates);
+
+  // Measure popup before final placement
+  popup.style.top = '-9999px'; popup.style.left = '-9999px';
+  popup.style.visibility = 'hidden'; popup.style.display = 'block';
+
+  const markRect = mark.getBoundingClientRect(); // viewport-relative (works with fixed)
+  const popupH   = popup.offsetHeight;
+  const popupW   = 440;
+  const gap      = 6;
+  const viewH    = window.innerHeight;
+  const viewW    = window.innerWidth;
+
+  // Flip above the mark if not enough room below
+  let top = markRect.bottom + gap;
+  if (top + popupH > viewH - 8) top = markRect.top - popupH - gap;
+  if (top < 8) top = 8;
+
+  let left = markRect.left;
+  if (left + popupW > viewW - 8) left = viewW - popupW - 8;
+  if (left < 8) left = 8;
+
+  popup.style.left       = left + 'px';
+  popup.style.top        = top  + 'px';
+  popup.style.visibility = 'visible';
+}
+
+function renderCandidates(candidates){
+  clist.innerHTML = '';
+  candidates.forEach((c,i) => {
+    const el = document.createElement('div');
+    el.className = 'citem'+(i===0?' sel':'');
+    const scoreVal = c.final_score != null ? c.final_score.toFixed(3) : (c.wins != null ? c.wins+' wins' : '—');
+    el.innerHTML = `<span class="crank">${i===0?'★':'#'+(i+1)}</span>
+      <span class="ctext">${c.sentence}</span>
+      <span class="cscore">${scoreVal}</span>`;
+    el.addEventListener('click', () => applySuggestion(i));
+    el.addEventListener('mouseenter', () => { selIdx=i; updateSel(); });
+    clist.appendChild(el);
+  });
+}
+
+function updateSel(){
+  clist.querySelectorAll('.citem').forEach((el,i) => el.classList.toggle('sel', i===selIdx));
+}
+
+function applySuggestion(i){
+  const c = activeCandidates[i];
+  if(!c || !activeError) return;
+  const cleanText = c.sentence.trim();
+  const text      = editor.value;
+  const newText   = text.slice(0, activeError.start) + cleanText + text.slice(activeError.end);
+  editor.value    = newText;
+  const newCursor = activeError.start + cleanText.length;
+  editor.selectionStart = editor.selectionEnd = newCursor;
+  editor.focus();
+  errors = errors.filter(e => e.id !== activeError.id);
+  errors = errors.map(err => {
+    const idx = newText.indexOf(err.sentence);
+    if(idx === -1) return null;
+    const charAfter = newText[idx + err.sentence.length];
+    if(charAfter !== undefined && !/[\s।?!\n]/.test(charAfter)) return null;
+    return { ...err, start: idx, end: idx + err.sentence.length };
+  }).filter(Boolean);
+  closePopup(); updateCount(); autoSize(); renderOverlay();
+  setStatus('ok','corrected ✓');
+}
+
+function closePopup(){
+  popup.style.display = 'none'; popup.style.visibility = 'visible';
+  overlay.querySelectorAll('.err-mark, .ok-mark').forEach(m => m.classList.remove('active'));
+  activeCandidates = []; activeError = null;
+}
+
+document.getElementById('pclose').addEventListener('click', closePopup);
+document.getElementById('keep').addEventListener('click', () => {
+  if(activeError) errors = errors.filter(e => e.id !== activeError.id);
+  closePopup(); renderOverlay(); setStatus('ok','kept original');
+});
+
+document.addEventListener('mousedown', e => {
+  if(!popup.contains(e.target) && !e.target.closest('.err-mark')) closePopup();
+});
+
+document.addEventListener('keydown', e => {
+  if(popup.style.display === 'none') return;
+  if(e.key==='Escape')    { closePopup(); e.preventDefault(); }
+  if(e.key==='ArrowDown') { selIdx=Math.min(selIdx+1,activeCandidates.length-1); updateSel(); e.preventDefault(); }
+  if(e.key==='ArrowUp')   { selIdx=Math.max(selIdx-1,0); updateSel(); e.preventDefault(); }
+  if(e.key==='Enter')     { applySuggestion(selIdx); e.preventDefault(); }
+});
+
+/* ── Correct all ── */
+function correctAll(){
+  const errs = [...errors].filter(e => e.hasError && e.candidates?.length).sort((a,b) => b.start - a.start);
+  if(!errs.length){ setStatus('ok','nothing to correct'); return; }
+  let text = editor.value;
+  for(const err of errs){ text = text.slice(0, err.start) + err.candidates[0].sentence.trim() + text.slice(err.end); }
+  editor.value = text; errors = [];
+  updateCount(); autoSize(); renderOverlay();
+  setStatus('ok', `corrected ${errs.length} sentence${errs.length>1?'s':''} ✓`);
+}
+
+/* ── Ignore all ── */
+function ignoreAll(){
+  const count = errors.length; errors = []; renderOverlay();
+  setStatus('ok', count ? `ignored ${count} highlight${count>1?'s':''}` : 'no highlights');
+}
+
+document.getElementById('btn-correct-all').addEventListener('click', correctAll);
+document.getElementById('btn-ignore-all').addEventListener('click', ignoreAll);
+
+/* ── Model switch: clear stale highlights and immediately re-check ── */
+modelSelect.addEventListener('change', () => {
+  errors = []; inFlight.clear(); clearTimeout(debounceTimer);
+  renderOverlay(); setStatus('ok','model switched — ready');
+  triggerCheck();
+});
+
+/* ── Initial sizing ── */
+autoSize();
+</script>
+</body>
+</html>
