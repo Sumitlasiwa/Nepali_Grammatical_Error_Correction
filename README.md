@@ -96,7 +96,7 @@ The code currently references these external model and dataset identifiers:
 
 ```bash
 git clone <your-repo-url>
-cd nepali_gec
+cd Nepali_Grammatical_Error_Correction
 ```
 
 ### 2. Create a virtual environment
