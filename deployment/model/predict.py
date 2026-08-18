@@ -11,108 +11,150 @@ from transformers import (
 )
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-
-# ===============================
-# Generator model (mT5)
-# ===============================
+# Model paths and prefixes (kept as config only; models are loaded lazily)
 MT5_MODEL_PATH = "AIsumit123/mt5-base-nepali-gec-stage2"
 mt5_prefix = "Correct sentence: "
-mt5_tokenizer = AutoTokenizer.from_pretrained(MT5_MODEL_PATH)
-mt5_model = AutoModelForSeq2SeqLM.from_pretrained(MT5_MODEL_PATH).to(device)
-mt5_model.eval()
 
-# ===============================
-# Generator model (mbart)
-# ===============================
 MBART_MODEL_PATH = "tuyal/Stage2FFTmBart"
 mbart_prefix = ""
-mbart_tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50")
-mbart_model = AutoModelForSeq2SeqLM.from_pretrained(MBART_MODEL_PATH).to(device)
-mbart_tokenizer.src_lang = "ne_NP"
-mbart_tokenizer.tgt_lang = "ne_NP"
-mbart_model.eval()
 
-# ===============================
-# Generator model (nllb)
-# ===============================
 NLLB_MODEL_PATH = "tuyal/Stage2FFTnllb200"
 nllb_prefix = ""
-nllb_tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
-nllb_model = AutoModelForSeq2SeqLM.from_pretrained(NLLB_MODEL_PATH).to(device)
-nllb_tokenizer.src_lang = "npi_Deva"
-nllb_model.eval()
 
-# ===============================
-# Pairwise reranker model (mt5)
-# ===============================
 MT5_RERANKER_PATH = "AIsumit123/muril-nepali-gec-reranker-mt5"
-mt5_rerank_tokenizer = AutoTokenizer.from_pretrained(MT5_RERANKER_PATH,trust_remote_code=True)
-mt5_rerank_model = AutoModelForSequenceClassification.from_pretrained(
-    MT5_RERANKER_PATH,trust_remote_code=True
-).to(device)
-mt5_rerank_model.eval()
-
-# ===============================
-# Pairwise reranker model (mbart)
-# ===============================
 MBART_RERANKER_PATH = "AIsumit123/muril-reranker-mbart"
-mbart_rerank_tokenizer = AutoTokenizer.from_pretrained(MBART_RERANKER_PATH,trust_remote_code=True)
-mbart_rerank_model = AutoModelForSequenceClassification.from_pretrained(
-    MBART_RERANKER_PATH,trust_remote_code=True
-).to(device)
-mbart_rerank_model.eval()
-
-# ===============================
-# Pairwise reranker model (nllb)
-# ===============================
 NLLB_RERANKER_PATH = "tuyal/nllbReranker"
-nllb_rerank_tokenizer = AutoTokenizer.from_pretrained(NLLB_RERANKER_PATH,trust_remote_code=True)
-nllb_rerank_model = AutoModelForSequenceClassification.from_pretrained(
-    NLLB_RERANKER_PATH,trust_remote_code=True
-).to(device)
-nllb_rerank_model.eval()
 
-
-# ── Model registry ──────────────────────────────────────────
-MODELS = {
+# Configuration for available model choices
+MODELS_CONFIG = {
     "mt5": {
-        "tokenizer": mt5_tokenizer,
+        "model_path": MT5_MODEL_PATH,
         "prefix": mt5_prefix,
-        "model": mt5_model,
-        "rerank_tokenizer": mt5_rerank_tokenizer,
-        "rerank_model": mt5_rerank_model,
+        "rerank_path": MT5_RERANKER_PATH,
+        "tokenizer_type": "auto",
+        "seq_class": AutoModelForSeq2SeqLM,
+        "rerank_class": AutoModelForSequenceClassification,
     },
     "mbart": {
-        "tokenizer": mbart_tokenizer,
+        "model_path": MBART_MODEL_PATH,
         "prefix": mbart_prefix,
-        "model": mbart_model,
-        "rerank_tokenizer": mbart_rerank_tokenizer,
-        "rerank_model": mbart_rerank_model,
+        "rerank_path": MBART_RERANKER_PATH,
+        "tokenizer_type": "mbart50",
+        "seq_class": AutoModelForSeq2SeqLM,
+        "rerank_class": AutoModelForSequenceClassification,
     },
     "nllb": {
-        "tokenizer": nllb_tokenizer,
+        "model_path": NLLB_MODEL_PATH,
         "prefix": nllb_prefix,
-        "model": mbart_model,
-        "rerank_tokenizer": nllb_rerank_tokenizer,
-        "rerank_model": nllb_rerank_model,
+        "rerank_path": NLLB_RERANKER_PATH,
+        "tokenizer_type": "nllb",
+        "seq_class": AutoModelForSeq2SeqLM,
+        "rerank_class": AutoModelForSequenceClassification,
     },
 }
+
+# In-memory cache for loaded models/tokenizers
+LOADED = {}
+
+
+def _unload_all_except(keep_choice=None):
+    # Unload models/tokenizers not equal to keep_choice to free VRAM
+    to_delete = [k for k in LOADED.keys() if k != keep_choice]
+    for k in to_delete:
+        entry = LOADED.pop(k)
+        for name, obj in entry.items():
+            try:
+                del obj
+            except Exception:
+                pass
+    if torch.cuda.is_available():
+        try:
+            torch.cuda.empty_cache()
+        except Exception:
+            pass
+
+
+def _load_choice(choice):
+    """Load models and tokenizers for a given choice into LOADED cache.
+    This will unload any other loaded models to keep VRAM usage low.
+    """
+    if choice in LOADED:
+        return LOADED[choice]
+
+    if choice not in MODELS_CONFIG:
+        raise ValueError(f"Unknown model choice: {choice}")
+
+    # Unload others first
+    _unload_all_except(keep_choice=None)
+
+    cfg = MODELS_CONFIG[choice]
+
+    # Load tokenizer
+    if cfg["tokenizer_type"] == "mbart50":
+        tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50")
+    elif cfg["tokenizer_type"] == "nllb":
+        tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(cfg["model_path"])
+
+    # special settings
+    if choice == "mbart":
+        tokenizer.src_lang = "ne_NP"
+        tokenizer.tgt_lang = "ne_NP"
+    if choice == "nllb":
+        try:
+            tokenizer.src_lang = "npi_Deva"
+        except Exception:
+            pass
+
+    # Load seq2seq model
+    seq_model = cfg["seq_class"].from_pretrained(cfg["model_path"]).to(device)
+    seq_model.eval()
+
+    # Load reranker tokenizer and model (trust_remote_code if needed)
+    rerank_tokenizer = AutoTokenizer.from_pretrained(cfg["rerank_path"], trust_remote_code=True)
+    rerank_model = cfg["rerank_class"].from_pretrained(cfg["rerank_path"], trust_remote_code=True).to(device)
+    rerank_model.eval()
+
+    entry = {
+        "tokenizer": tokenizer,
+        "prefix": cfg["prefix"],
+        "model": seq_model,
+        "rerank_tokenizer": rerank_tokenizer,
+        "rerank_model": rerank_model,
+    }
+
+    LOADED[choice] = entry
+
+    return entry
 
 # =====================================================
 # Generate candidate corrections
 # =====================================================
 def generate_candidates(input_text, model_choice="mt5", k=5):
-
-    prefix = MODELS[model_choice]["prefix"]
+    entry = _load_choice(model_choice)
+    prefix = entry["prefix"]
     prefixed = prefix + input_text
-    tokenizer = MODELS[model_choice]["tokenizer"]
-    model = MODELS[model_choice]["model"]
+    tokenizer = entry["tokenizer"]
+    model = entry["model"]
     inputs = tokenizer(
         prefixed,
         return_tensors="pt",
         truncation=True,
         max_length=256
     ).to(device)
+    # determine forced_bos_token_id when needed
+    forced_bos_token_id = None
+    if model_choice == "mbart":
+        try:
+            forced_bos_token_id = tokenizer.lang_code_to_id.get("ne_NP")
+        except Exception:
+            forced_bos_token_id = None
+    elif model_choice == "nllb":
+        try:
+            forced_bos_token_id = tokenizer.convert_tokens_to_ids("npi_Deva")
+        except Exception:
+            forced_bos_token_id = None
 
     with torch.no_grad():
         outputs = model.generate(
@@ -124,12 +166,7 @@ def generate_candidates(input_text, model_choice="mt5", k=5):
             repetition_penalty=1.05,
             no_repeat_ngram_size=3,
             early_stopping=True,
-            
-            forced_bos_token_id = (
-                tokenizer.lang_code_to_id["ne_NP"] if model_choice == "mbart"
-                else tokenizer.convert_tokens_to_ids("npi_Deva") if model_choice == "nllb"
-                else None
-            )
+            forced_bos_token_id=forced_bos_token_id,
         )
 
     candidates = tokenizer.batch_decode(
@@ -147,8 +184,9 @@ def generate_candidates(input_text, model_choice="mt5", k=5):
 # Pairwise comparison function
 # =====================================================
 def compare_pair(source, cand_A, cand_B, model_choice="mt5"):
-    rerank_tokenizer = MODELS[model_choice]["rerank_tokenizer"]
-    rerank_model = MODELS[model_choice]["rerank_model"]
+    entry = _load_choice(model_choice)
+    rerank_tokenizer = entry["rerank_tokenizer"]
+    rerank_model = entry["rerank_model"]
     inputs = rerank_tokenizer(
         source,
         f"{cand_A} {rerank_tokenizer.sep_token} {cand_B}",
@@ -199,7 +237,7 @@ def rerank_candidates(source, candidates, model_choice="mt5"):
 # =====================================================
 def predict_output(input_text, model_choice="mt5"):
 
-    candidates = generate_candidates(input_text, k=5)
+    candidates = generate_candidates(input_text, model_choice=model_choice, k=5)
 
     ranked = rerank_candidates(input_text, candidates, model_choice)
 
